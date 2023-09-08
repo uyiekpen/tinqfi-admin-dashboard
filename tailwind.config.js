@@ -7,6 +7,9 @@ module.exports = {
       colors: {
         tinqfiYellow: "#FCAD2A",
         tinqfiGrey: "#F2F2F7",
+        tinqfiGray: "#F9FAFB",
+        tinqfiPink: "#FFF8E8",
+        tinqfiRed: "#EB5757",
       },
       boxShadow: {
         "3xl": "0 35px 60px -15px rgba(252, 173, 42, 0.5)",

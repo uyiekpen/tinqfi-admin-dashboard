@@ -27,7 +27,7 @@
 
 /* Sidebar */
 .sidebar {
-  @apply bg-white w-[260px] px-8 py-5 h-screen transition-all duration-300 ease-in-out ;
+  @apply bg-white w-[260px] px-8 py-5 h-screen transition-all duration-300 ease-in-out;
 }
 
 .logo {
@@ -41,7 +41,7 @@
 }
 
 .nav-item {
-  @apply flex mb-1 mr-1 mt-3 ;
+  @apply flex mb-1 mr-1 mt-3;
 }
 
 .nav-link {
@@ -52,22 +52,38 @@
 }
 
 .nav-link.active {
-@apply bg-tinqfiGrey shadow-2xl text-tinqfiYellow
+  @apply bg-tinqfiGrey shadow-2xl text-tinqfiYellow;
 }
 
 .nav-link-icon {
   @apply flex justify-center items-center;
 }
 
-.navigation-2{
-  @apply mt-9
+.navigation-2 {
+  @apply mt-9;
 }
 
 /* header */
-.header{
-  @apply w-screen  items-center h-[40px] px-8 py-5 justify-center
+.header {
+  @apply w-screen  items-center h-[40px] px-8 py-5 justify-center;
 }
 
-.holder{
-  @apply flex justify-between items-center
+.holder {
+  @apply flex justify-between items-center;
+}
+
+.header-search {
+  @apply flex  items-center h-[40px] w-[350px] bg-tinqfiGray  rounded-md p-2 relative;
+}
+
+.search {
+  @apply bg-tinqfiGray border-none outline-none p-1;
+}
+
+.lang-icon {
+  @apply flex w-[120px] justify-between items-center;
+}
+
+.profile {
+  @apply flex w-[180px] items-center justify-between
 }

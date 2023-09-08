@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { SIgnIn, SignUp } from "../auth";
-import Nav from "../components/shared/Nav";
+import Main from "../components/shared/Main";
 import Dashboard from "../pages/Dashboard";
 
 const AllRoutes = () => {
@@ -18,7 +18,7 @@ const AllRoutes = () => {
       path: "/dashboard",
       children: [
         {
-          element: <Nav />,
+          element: <Main />,
           children: [
             {
               index: true,

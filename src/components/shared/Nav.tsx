@@ -7,7 +7,6 @@ const Nav = () => {
     <div className="flex">
       <Sidebar />
       <Header />
-
     </div>
   );
 };

@@ -12,11 +12,15 @@ import signout from "../assets/icon/sign-out.png"
 import users from "../assets/icon/users.png"
 import withdrawal from "../assets/icon/withdrawal.png"
 import logo from "../assets/image/logo.png"
+import United from "../assets/icon/United.png"
+import message from "../assets/icon/message.png"
+
+
 
 
 
 export const iconsImgs = {
-  card, earn, exchange, schedule,settings, signout, users,withdrawal, notifications, launchpad,Group,dashboard, deposit
+  card, earn, exchange, schedule,settings, signout, users,withdrawal, notifications, launchpad,Group,dashboard, deposit,United, message
 }
 
 export const Imgs ={
