@@ -1,38 +1,73 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* signIn */
+
+.signIn {
+  @apply flex justify-center items-center w-screen h-screen;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.signIn-Card {
+  @apply bg-white py-8 px-4 shadow-3xl  sm:rounded-md sm:px-10;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.form-holder {
+  @apply p-5;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.input {
+  @apply appearance-none block  px-3 py-2 w-56 md:w-96 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm;
+}
+.button {
+  @apply w-56 flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-bold text-white bg-tinqfiYellow hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500;
 }
 
-.App-link {
-  color: #61dafb;
+/* Sidebar */
+.sidebar {
+  @apply bg-white w-[260px] px-8 py-5 h-screen transition-all duration-300 ease-in-out ;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.logo {
+  @apply flex items-center justify-center h-[40px] w-fit;
+}
+.logo-img {
+  @apply object-contain h-[40px] w-[100px];
+}
+.navigation {
+  /* @apply  */
+}
+
+.nav-item {
+  @apply flex mb-1 mr-1 mt-3 ;
+}
+
+.nav-link {
+  @apply h-[44px] p-4 transition-all duration-300 ease-in-out rounded-[8px]  flex items-center justify-between  gap-6 tracking-wide border border-transparent capitalize;
+}
+.nav-link:hover {
+  @apply border-2 border-tinqfiGrey;
+}
+
+.nav-link.active {
+@apply bg-tinqfiGrey shadow-2xl text-tinqfiYellow
+}
+
+.nav-link-icon {
+  @apply flex justify-center items-center;
+}
+
+.navigation-2{
+  @apply mt-9
+}
+
+/* header */
+.header{
+  @apply w-screen  items-center h-[40px] px-8 py-5 justify-center
+}
+
+.holder{
+  @apply flex justify-between items-center
 }
