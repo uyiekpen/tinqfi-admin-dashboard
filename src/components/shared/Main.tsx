@@ -3,9 +3,9 @@ import Nav from "./Nav";
 
 const Main = () => {
   return (
-    <div className=" flex flex-col relative">
+    <div className=" flex flex-col relative  ">
       <Nav />
-      <div className="absolute top-20 left-60 h-full w-full">
+      <div className="main-container">
         <Outlet />
       </div>
     </div>

@@ -1,4 +1,4 @@
-import React,{useState,useContext,useEffect} from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { navigationLinks, navigationdown } from "../../data/data";
 import { Imgs } from "../../utils/images";
 import { SidebarContext } from "../../context/sidebarContext";
@@ -9,10 +9,10 @@ const Sidebar = () => {
   const { isSidebarOpen } = useContext(SidebarContext);
 
   useEffect(() => {
-    if(isSidebarOpen){
-      setSidebarClass('sidebar-change');
+    if (isSidebarOpen) {
+      setSidebarClass("sidebar-change");
     } else {
-      setSidebarClass('');
+      setSidebarClass("");
     }
   }, [isSidebarOpen]);
 
@@ -21,39 +21,51 @@ const Sidebar = () => {
       <div className="logo">
         <img src={Imgs.logo} alt="logo.png" className="logo-img" />
       </div>
-      <nav className="navigation">
-        <ul className="nav-list">
-          {navigationLinks.map((navigationLink) => (
-            <li className="nav-item" key={navigationLink.id}>
-              <a href="#" className={ `nav-link ${ navigationLink.id === activeLinkIdx ? 'active' : null }` }>
-                <img
-                  src={navigationLink.image}
-                  className="nav-link-icon"
-                  alt={navigationLink.title}
-                />
-                <span className="nav-link-text">{navigationLink.title}</span>
-              </a>
-            </li>
-          ))}
-        </ul>
-      </nav>
+      <div className="menu custom-scrollbar">
+        <nav className="navigation">
+          <ul className="nav-list">
+            {navigationLinks.map((navigationLink) => (
+              <li className="nav-item" key={navigationLink.id}>
+                <a
+                  href="#"
+                  className={`nav-link ${
+                    navigationLink.id === activeLinkIdx ? "active" : null
+                  }`}
+                >
+                  <img
+                    src={navigationLink.image}
+                    className="nav-link-icon"
+                    alt={navigationLink.title}
+                  />
+                  <span className="nav-link-text">{navigationLink.title}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
 
-      <nav className="navigation-2">
-        <ul className="nav-list">
-          {navigationdown.map((navigationLink) => (
-            <li className="nav-item" key={navigationLink.id}>
-              <a href="#" className="nav-link">
-                <img
-                  src={navigationLink.image}
-                  className="nav-link-icon"
-                  alt={navigationLink.title}
-                />
-                <span className="nav-link-text">{navigationLink.title}</span>
-              </a>
-            </li>
-          ))}
-        </ul>
-      </nav>
+        <nav className="navigation-2">
+          <ul className="nav-list">
+            {navigationdown.map((navigationLink) => (
+              <li className="nav-item" key={navigationLink.id}>
+                <a href="#" className="nav-link">
+                  <img
+                    src={navigationLink.image}
+                    className="nav-link-icon"
+                    alt={navigationLink.title}
+                  />
+                  <span className="nav-link-text">{navigationLink.title}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
+        <nav className="navigation-3">
+          <div>sun</div>
+          <div>mean</div>
+        </nav>
+      </div>
     </div>
   );
 };

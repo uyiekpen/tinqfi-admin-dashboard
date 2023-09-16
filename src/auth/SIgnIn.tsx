@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Input } from "../components/ui";
+import { Button, Input, Label, Form } from "../components/ui";
 
 const SIgnIn = () => {
   return (
@@ -8,14 +8,14 @@ const SIgnIn = () => {
         <div className="form-holder">
           <p className="text-xl font-normal">Create an Account?</p>
           <h1 className="text-2xl font-bold">Sign In</h1>
-          <form className="space-y-6">
+          <Form className="space-y-6">
             <div className="mt-1">
-              <label
+              <Label
                 htmlFor="password"
                 className="block font-bold text-sm  text-gray-700"
               >
                 Email
-              </label>
+              </Label>
               <Input
                 type="email"
                 placeholder="Enter your Email "
@@ -24,12 +24,12 @@ const SIgnIn = () => {
             </div>
 
             <div className="mt-1">
-              <label
+              <Label
                 htmlFor="password"
                 className="block font-bold text-sm  text-gray-700"
               >
                 Password
-              </label>
+              </Label>
               <Input
                 type="password"
                 placeholder="Enter your Password "
@@ -42,7 +42,7 @@ const SIgnIn = () => {
                 Sign In
               </Button>
             </div>
-          </form>
+          </Form>
           <div className="mt-2 flex justify-center items-center">
             I Dont have an account? <span className="text-tinqfiYellow capitalize"> sign up</span>
           </div>

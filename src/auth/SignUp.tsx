@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Input } from "../components/ui";
+import { Button, Input, Label, Form } from "../components/ui";
 
 const SignUp = () => {
   return (
@@ -8,14 +8,14 @@ const SignUp = () => {
         <div className="form-holder">
           <p className="text-xl font-normal">Create an Account?</p>
           <h1 className="text-2xl font-bold">Sign In</h1>
-          <form className="space-y-6">
+          <Form className="space-y-6">
             <div className="mt-1">
-              <label
+              <Label
                 htmlFor="password"
                 className="block font-bold text-sm  text-gray-700"
               >
                 Name
-              </label>
+              </Label>
               <Input
                 type="text"
                 placeholder="Enter your Name "
@@ -24,12 +24,12 @@ const SignUp = () => {
             </div>
 
             <div className="mt-1">
-              <label
+              <Label
                 htmlFor="password"
                 className="block font-bold text-sm  text-gray-700"
               >
                 Email
-              </label>
+              </Label>
               <Input
                 type="email"
                 placeholder="Enter your Email "
@@ -38,12 +38,12 @@ const SignUp = () => {
             </div>
 
             <div className="mt-1">
-              <label
+              <Label
                 htmlFor="password"
                 className="block font-bold text-sm  text-gray-700"
               >
                 Password
-              </label>
+              </Label>
               <Input
                 type="password"
                 placeholder="Enter your Password "
@@ -52,12 +52,12 @@ const SignUp = () => {
             </div>
 
             <div className="mt-1">
-              <label
+              <Label
                 htmlFor="password"
                 className="block font-bold text-sm  text-gray-700"
               >
                 Confirm PassWord{" "}
-              </label>
+              </Label>
               <Input
                 type="password"
                 placeholder="Confirm your password"
@@ -69,7 +69,7 @@ const SignUp = () => {
                 Sign Up
               </Button>
             </div>
-          </form>
+          </Form>
         </div>
       </div>
     </div>

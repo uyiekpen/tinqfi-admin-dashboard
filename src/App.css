@@ -7,7 +7,7 @@
 /* signIn */
 
 .signIn {
-  @apply flex justify-center items-center w-screen h-screen;
+  @apply flex justify-center items-center w-full h-screen;
 }
 
 .signIn-Card {
@@ -27,7 +27,7 @@
 
 /* Sidebar */
 .sidebar {
-  @apply bg-white w-[260px] px-8 py-5 h-screen transition-all duration-300 ease-in-out;
+  @apply bg-white p-4  w-[260px] transition-all duration-300 ease-in-out h-full ;
 }
 
 .logo {
@@ -37,7 +37,11 @@
   @apply object-contain h-[40px] w-[100px];
 }
 .navigation {
-  /* @apply  */
+  /* @apply   */
+}
+
+.menu {
+  @apply flex flex-col justify-between;
 }
 
 .nav-item {
@@ -45,14 +49,14 @@
 }
 
 .nav-link {
-  @apply h-[44px] p-4 transition-all duration-300 ease-in-out rounded-[8px]  flex items-center justify-between  gap-6 tracking-wide border border-transparent capitalize;
+  @apply h-[44px] p-4 transition-all duration-300 ease-in-out   flex items-center justify-between  gap-6 tracking-wide border border-transparent capitalize;
 }
 .nav-link:hover {
   @apply border-2 border-tinqfiGrey;
 }
 
 .nav-link.active {
-  @apply bg-tinqfiGrey shadow-2xl text-tinqfiYellow;
+  @apply bg-tinqfiGrey  text-tinqfiYellow;
 }
 
 .nav-link-icon {
@@ -60,12 +64,37 @@
 }
 
 .navigation-2 {
-  @apply mt-9;
+  @apply mt-9 mb-2;
+}
+
+.navigation-3 {
+  @apply bg-slate-600 h-[60px]  flex  justify-center items-center ;
+}
+
+@layer utilities {
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+    border-radius: 2px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: #09090a;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #5c5c7b;
+    border-radius: 50px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #7878a3;
+  }
 }
 
 /* header */
 .header {
-  @apply w-screen  items-center h-[40px] px-8 py-5 justify-center;
+  @apply w-full  items-center h-[40px] px-8 py-5 justify-center;
 }
 
 .holder {
@@ -85,5 +114,32 @@
 }
 
 .profile {
-  @apply flex w-[180px] items-center justify-between
+  @apply flex w-[180px] items-center justify-between;
+}
+
+/* main */
+.main-container {
+  @apply top-20 w-[calc(100vw-250px)]  flex justify-center items-center bg-tinqfiGray  right-0 absolute h-full;
+}
+
+.sales-stats {
+  @apply grid grid-cols-1 md:grid-cols-3  md:gap-x-10 ;
+}
+
+@layer utilities {
+  .exchange {
+    @apply bg-blue-200;
+  }
+
+  .withdrawal {
+    @apply bg-red-200;
+  }
+
+  .deposit {
+    @apply bg-red-200;
+  }
+
+  .loan {
+    @apply bg-red-200;
+  }
 }
