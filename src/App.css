@@ -68,7 +68,7 @@
 }
 
 .navigation-3 {
-  @apply bg-slate-600 h-[60px]  flex  justify-center items-center ;
+  @apply h-[60px] -inset-20  flex  justify-center items-center ;
 }
 
 @layer utilities {

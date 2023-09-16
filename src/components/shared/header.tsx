@@ -31,8 +31,9 @@ const Header = () => {
             </span>
           </div>
           <div className="flex">
-            <div className="h-[40px] w-[40px] bg-tinqfiPink rounded-md">
-              <img src="" className="" />
+            <div className="h-[40px] w-[35px]bg-tinqfiPink rounded-md">
+            
+              <img src={iconsImgs.avatar1} className="w-full h-full object-contain " alt="profile.png"/>
             </div>
 
             <div className="flex flex-col text-sm capitalize">

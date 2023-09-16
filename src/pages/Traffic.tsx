@@ -30,7 +30,7 @@ const Revenue = () => {
         />
       </div>
       <div className="flex justify-center flex-col bg-white rounded-md  w-[300px] h-[250px] p-2">
-        {" "}
+        <div className="p-4 text-sm">Traffic by Device</div>{" "}
         <SingleVerticalBarChart
           labels={labels}
           datasets={datasets}
@@ -38,7 +38,8 @@ const Revenue = () => {
         />
       </div>
       <div className="flex justify-center flex-col bg-white rounded-md  w-[150px] h-[250px] p-2">
-        </div>{" "}
+        <div className="p-4 text-sm">Traffic by Location</div>
+      </div>{" "}
     </div>
   );
 };

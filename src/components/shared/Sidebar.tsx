@@ -2,6 +2,7 @@ import React, { useState, useContext, useEffect } from "react";
 import { navigationLinks, navigationdown } from "../../data/data";
 import { Imgs } from "../../utils/images";
 import { SidebarContext } from "../../context/sidebarContext";
+import { ToggleButton } from "../ui";
 
 const Sidebar = () => {
   const [activeLinkIdx] = useState(1);
@@ -62,8 +63,7 @@ const Sidebar = () => {
         </nav>
 
         <nav className="navigation-3">
-          <div>sun</div>
-          <div>mean</div>
+          <ToggleButton />
         </nav>
       </div>
     </div>
