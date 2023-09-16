@@ -1,5 +1,6 @@
 import React from "react";
 import { PieChart, SingleVerticalBarChart } from "../components/ui";
+import LineChart from "../components/ui/LineChart";
 
 const Revenue = () => {
   const data1 = [30.8, 38.6, 22.5, 8.1]; // Dummy data set 1
@@ -37,8 +38,11 @@ const Revenue = () => {
           title={""}
         />
       </div>
-      <div className="flex justify-center flex-col bg-white rounded-md  w-[150px] h-[250px] p-2">
+      <div className="flex justify-center flex-col bg-white rounded-md  w-[180px] h-[250px] p-2">
         <div className="p-4 text-sm">Traffic by Location</div>
+        <div>
+          <LineChart/>
+        </div>
       </div>{" "}
     </div>
   );
