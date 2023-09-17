@@ -2,7 +2,7 @@ import React, { ReactNode } from "react";
 
 interface iButton {
   className: string;
-  type: "submit" | "button";
+  type?: "submit" | "button";
   onClick?: () => void;
   children: ReactNode;
 }

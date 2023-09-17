@@ -27,7 +27,7 @@
 
 /* Sidebar */
 .sidebar {
-  @apply bg-white p-4  w-[260px] transition-all duration-300 ease-in-out h-full ;
+  @apply bg-white p-4  w-[240px] transition-all duration-300 ease-in-out h-full ;
 }
 
 .logo {
@@ -119,7 +119,7 @@
 
 /* main */
 .main-container {
-  @apply top-20 w-[calc(100vw-250px)]  flex justify-center items-center bg-tinqfiGray  right-0 absolute h-full;
+  @apply top-20 w-[calc(100vw-240px)]  flex justify-center items-center bg-tinqfiGray  right-0 absolute h-full px-2;
 }
 
 .sales-stats {

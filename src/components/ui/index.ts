@@ -1,10 +1,17 @@
-import Input from "./Input";
 import Button from "./Button";
-import Label from "./label";
+import DoubleBarChart from "./DoubleBarChart";
+import Dropdown from "./Dropdown";
 import Form from "./Form";
+import Input from "./Input";
 import PieChart from "./PieChart";
 import SingleVerticalBarChart from "./SingleVerticalBarChart";
-import DoubleBarChart from "./DoubleBarChart";
+import SalesStatistics from "./Statistics";
+import ReusableTable from "./Table";
+import Tabs from "./Tabs";
 import ToggleButton from "./ToggleButton";
+import Label from "./label";
 
-export { Input, Button, Label, Form, PieChart, SingleVerticalBarChart, DoubleBarChart,ToggleButton };
+export {
+  Button, DoubleBarChart, Dropdown, Form, Input, Label, PieChart, ReusableTable, SalesStatistics, SingleVerticalBarChart, Tabs, ToggleButton
+};
+

@@ -122,3 +122,99 @@ export const Transaction = [
     amount: "-$4000",
   },
 ];
+
+//statistics
+
+export const salesStatistics = [
+  {
+    id: 0,
+    title: "New Users",
+    amount: "721K",
+    date: "07 Jan",
+    percentage: "11.01%",
+    status: "profit",
+  },
+  {
+    id: 1,
+    title: "inflows",
+    amount: "$721K",
+    date: "07 Jan",
+    percentage: "-3.2%",
+    status: "lost",
+  },
+  {
+    id: 0,
+    title: "Active Users",
+    amount: "$7,249.31    ",
+    date: "07 Jan",
+    percentage: "11.01%",
+    status: "profit",
+  },
+];
+
+function getDate(dayString: any) {
+  const today = new Date();
+  const year = today.getFullYear().toString();
+  let month = (today.getMonth() + 1).toString();
+
+  if (month.length === 1) {
+    month = "0" + month;
+  }
+
+  return dayString.replace("YEAR", year).replace("MONTH", month);
+}
+
+export const usertoken = {
+  onRegistrationLedgerAccnts: [
+    {
+      tokenAccountId: "632cee80df5f37ccc6f45c23",
+      tokenAccountcurrency: "DOGE",
+      createdAt: 1663889025022,
+      fullname: "Jerry Ifeanyi",
+      nickname: "Jerrie",
+      phone: "0",
+      status: "active",
+      email: "jerrycifeanyi@gmail.com",
+    },
+    {
+      tokenAccountId: "632cee80549914722e27dad0",
+      tokenAccountcurrency: "BTC",
+      createdAt: 1663889025449,
+      fullname: "Jerry Ifeanyi",
+      nickname: "Jerrie",
+      phone: "0",
+      status: "active",
+
+      email: "jerrycifeanyi@gmail.com",
+    },
+    {
+      tokenAccountId: "632cee805dcdf68ce45bd663",
+      tokenAccountcurrency: "BSC",
+      createdAt: 1663889025482,
+      fullname: "Jerry Ifeanyi",
+      nickname: "Jerrie",
+      status: "active",
+
+      phone: "0",
+      email: "jerrycifeanyi@gmail.com",
+    },
+    {
+      tokenAccountId: "632cee80b128a172744286f2",
+      tokenAccountcurrency: "ETH",
+      createdAt: 1663889027545,
+      fullname: "Jerry Ifeanyi",
+      nickname: "Jerrie",
+      phone: "0",
+      status: "active",
+
+      email: "jerrycifeanyi@gmail.com",
+    },
+  ],
+
+  fullname: "Jerry Ifeanyi",
+  nickname: "Jerrie",
+  phone: "0",
+  email: "jerrycifeanyi@gmail.com",
+  dateJoined: "2022-09-22T23:22:43.007Z",
+  __v: 0,
+};
