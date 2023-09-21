@@ -27,7 +27,7 @@
 
 /* Sidebar */
 .sidebar {
-  @apply bg-white p-4  w-[240px] transition-all duration-300 ease-in-out h-full ;
+  @apply bg-white p-4  w-[240px] transition-all duration-300 ease-in-out h-full;
 }
 
 .logo {
@@ -68,7 +68,7 @@
 }
 
 .navigation-3 {
-  @apply h-[60px]  -mb-16  flex  justify-center items-center ;
+  @apply h-[60px]  -mb-16  flex  justify-center items-center;
 }
 
 @layer utilities {
@@ -123,7 +123,11 @@
 }
 
 .sales-stats {
-  @apply grid grid-cols-1 md:grid-cols-3  md:gap-x-10 ;
+  @apply grid grid-cols-1 md:grid-cols-3  md:gap-x-10;
+}
+
+.profile-stats {
+  @apply grid grid-cols-1 md:grid-cols-4  md:gap-x-6;
 }
 
 @layer utilities {

@@ -13,7 +13,7 @@ export const navigationLinks: NavigationLink[] = [
   { id: 2, title: "users", image: iconsImgs.users },
   { id: 3, title: "deposit", image: iconsImgs.deposit },
   { id: 4, title: "withdrawal", image: iconsImgs.withdrawal },
-  { id: 5, title: "transfer", image: iconsImgs.deposit },
+  { id: 5, title: "transfer", image: iconsImgs.transfer },
   { id: 6, title: "earn", image: iconsImgs.earn },
   { id: 7, title: "exchange", image: iconsImgs.exchange },
   { id: 8, title: "loans", image: iconsImgs.schedule },
@@ -120,6 +120,45 @@ export const Transaction = [
     time: "4:30PM",
     transaction: "withdrawal",
     amount: "-$4000",
+  },
+];
+
+//Btc
+export const Tokens = [
+  {
+    id: 1,
+    title: "BTC",
+    details: "(Bitcoin)",
+    image: iconsImgs.bitcoin,
+    amount: "$2033",
+  },
+  {
+    id: 2,
+    title: "BTC",
+    details: "(Bitcoin)",
+    image: iconsImgs.bitcoin,
+    amount: "$2033",
+  },
+  {
+    id: 1,
+    title: "BTC",
+    details: "(Bitcoin)",
+    image: iconsImgs.bitcoin,
+    amount: "$2033",
+  },
+  {
+    id: 1,
+    title: "BTC",
+    details: "(Bitcoin)",
+    image: iconsImgs.bitcoin,
+    amount: "$2033",
+  },
+  {
+    id: 1,
+    title: "BTC",
+    details: "(Bitcoin)",
+    image: iconsImgs.bitcoin,
+    amount: "$2033",
   },
 ];
 

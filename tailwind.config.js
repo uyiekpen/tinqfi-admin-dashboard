@@ -11,7 +11,7 @@ module.exports = {
         tinqfiPink: "#FFF8E8",
         tinqfiRed: "#EB5757",
         tinqfiBlue: "#237BF1",
-
+        tinqfiGreen: "#5ED5A8",
       },
       extend: {
         width: {

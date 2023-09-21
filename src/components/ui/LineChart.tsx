@@ -2,7 +2,7 @@ import React from "react";
 
 const LineChart = () => {
   return (
-    <div className="p-2">
+    <div className="p-2 flex flex-col justify-start">
       <div className="text-[10px] flex justify-between font-semibold items-center">
         Google <span className=" h-1 w-20 bg-tinqfiGray rounded-full"></span>
       </div>

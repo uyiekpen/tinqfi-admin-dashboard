@@ -26,7 +26,7 @@ const salesStatistics = [
   {
     id: 0,
     title: "Active Users",
-    amount: "$7,249.31    ",
+    amount: "7,249.31    ",
     date: "07 Jan",
     percentage: "11.01%",
     status: "profit",
@@ -58,7 +58,7 @@ const Dashboard = () => {
                     status === "profit" ? "profit" : "lost"
                   } flex items-center justify-between  rounded-full py-1 px-3 font-semibold text-[8px]`}
                 >
-                   <BsPlus />
+                  <BsPlus />
                   {percentage}
                   <IoMdTrendingUp />
                 </p>
@@ -120,9 +120,9 @@ const Dashboard = () => {
                 {Transaction.map((transaction) => (
                   <div
                     key={transaction.id}
-                    className="flex items-center justify-center h-[50px] bg-tinqfiGray mt-2 rounded-md   w-[300px] "
+                    className="flex items-center justify-evenly h-[50px] bg-tinqfiGray mt-2 rounded-md   w-[300px] "
                   >
-                    <div className="flex justify-center w-full items-center">
+                    <div className="flex justify-center w-full items-center px-2">
                       <div className="h-[30px] w-[30px] rounded-md overflow-hidden">
                         <img
                           src={transaction.image}
@@ -130,18 +130,19 @@ const Dashboard = () => {
                           className="object-cover w-full h-full"
                         />
                       </div>
-
-                      <div className=" px-2 text-sm capitalize">
-                        <h2 className="font-semibold">{transaction.title}</h2>
-                        <p>
-                          {transaction.date}|{transaction.time}
-                        </p>
-                      </div>
-                      <div className=" px-2 text-sm capitalize">
-                        <h2 className="font-semibold">
-                          {transaction.transaction}
-                        </h2>
-                        <p>{transaction.amount}</p>
+                      <div className=" px-2 w-[300px] text-sm capitalize flex justify-between">
+                        <div className="">
+                          <h2 className="font-semibold">{transaction.title}</h2>
+                          <p>
+                            {transaction.date}|{transaction.time}
+                          </p>
+                        </div>
+                        <div className="">
+                          <h2 className="font-semibold">
+                            {transaction.transaction}
+                          </h2>
+                          <p>{transaction.amount}</p>
+                        </div>
                       </div>
                     </div>
                   </div>

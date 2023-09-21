@@ -10,8 +10,11 @@ import ReusableTable from "./Table";
 import Tabs from "./Tabs";
 import ToggleButton from "./ToggleButton";
 import Label from "./label";
+import NewTab from "./NewTabs";
+import ProgressBar from "./ProgressBar";
+import CircularProgressBar from "./CircularProgressBar.tsx";
 
 export {
-  Button, DoubleBarChart, Dropdown, Form, Input, Label, PieChart, ReusableTable, SalesStatistics, SingleVerticalBarChart, Tabs, ToggleButton
+  Button, DoubleBarChart, Dropdown, Form, Input, Label, PieChart, ReusableTable, SalesStatistics, SingleVerticalBarChart, Tabs, ToggleButton,NewTab, ProgressBar, CircularProgressBar
 };
 

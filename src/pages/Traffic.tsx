@@ -13,14 +13,14 @@ const Revenue = () => {
       label: "Dataset 1",
       data: [55, 50, 70, 75, 50, 50, 30, 60, 80, 50, 35, 65],
       backgroundColor: "#1C1C1C",
-      barThickness: 2,
+      barThickness: 0.2,
       barPercentage: 1.0,
     },
   ];
   const labels = ["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"];
 
   return (
-    <div className="flex justify-between ">
+    <div className="flex justify-evenly space-x-3 ">
       <div className="flex justify-center flex-col bg-white rounded-md  w-[200px] h-[250px] ">
         <div className="p-4 text-sm">Traffic by Location</div>
         <PieChart
@@ -40,7 +40,7 @@ const Revenue = () => {
       </div>
       <div className="flex justify-center flex-col bg-white rounded-md  w-[180px] h-[250px] p-2">
         <div className="p-4 text-sm">Traffic by Location</div>
-        <div>
+        <div >
           <LineChart/>
         </div>
       </div>{" "}
