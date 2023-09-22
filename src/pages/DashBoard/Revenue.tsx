@@ -1,5 +1,5 @@
 import React from "react";
-import { PieChart, DoubleBarChart } from "../components/ui";
+import { PieChart, DoubleBarChart } from "../../components/ui";
 
 const Revenue = () => {
   const data1 = [50, 30, 22.5, 20]; // Dummy data set 1

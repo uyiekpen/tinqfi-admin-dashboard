@@ -1,6 +1,6 @@
 import { FiChevronDown } from "react-icons/fi";
-import { Message, Transaction } from "../data/data";
-import { iconsImgs } from "../utils/images";
+import { Message, Transaction } from "../../data/data";
+import { iconsImgs } from "../../utils/images";
 import Traffic from "./Traffic";
 import Revenu from "./Revenue";
 import { BsPlus } from "react-icons/bs";

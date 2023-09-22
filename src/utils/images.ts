@@ -28,7 +28,10 @@ import avatar7 from "../assets/avatars/thumb-7.jpg";
 import avatar8 from "../assets/avatars/thumb-8.jpg";
 import avatar9 from "../assets/avatars/thumb-9.jpg";
 import avatar0 from "../assets/avatars/thumb-10.jpg";
-import bitcoin from "../assets/icon/bitcoin.png"
+import bitcoin from "../assets/icon/bitcoin.png";
+import account from "../assets/icon/account.png";
+import freeze from "../assets/icon/freeze.png";
+import block from "../assets/icon/block.png";
 
 export const iconsImgs = {
   bitcoin,
@@ -59,6 +62,9 @@ export const iconsImgs = {
   avatar6,
   avatar7,
   avatar8,
+  account,
+  block,
+  freeze,
   avatar9,
 };
 

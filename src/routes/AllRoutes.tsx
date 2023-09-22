@@ -1,9 +1,10 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { SIgnIn, SignUp } from "../auth";
 import Main from "../components/shared/Main";
-import Dashboard from "../pages/Dashboard";
+import Dashboard from "../pages/DashBoard/Dashboard";
 import User from "../pages/User/User";
 import Profile from "../pages/User/Profile";
+import Deposit from "../pages/Deposit/Deposit";
 
 const AllRoutes = () => {
   const Index = createBrowserRouter([
@@ -33,6 +34,11 @@ const AllRoutes = () => {
             {
               path: "profile",
               element: <Profile />,
+            },
+
+            {
+              path: "deposit",
+              element: <Deposit />,
             },
           ],
         },

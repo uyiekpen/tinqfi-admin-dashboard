@@ -3,9 +3,10 @@ import React, { useState } from "react";
 import { BsPlus } from "react-icons/bs";
 import { FiChevronDown } from "react-icons/fi";
 import { HiOutlineMail } from "react-icons/hi";
-import { IoMdTrendingUp } from "react-icons/io";
-import { Button, ReusableTable, Tabs } from "../../components/ui";
+import { IoIosArrowDown, IoMdTrendingUp } from "react-icons/io";
+import { Button, Dropdown, ReusableTable, Tabs } from "../../components/ui";
 import { Message, Transaction, usertoken } from "../../data/data";
+import { iconsImgs } from "../../utils/images";
 
 const salesStatistics = [
   {
@@ -39,8 +40,38 @@ const Dashboard = () => {
     () => usertoken.onRegistrationLedgerAccnts,
     []
   );
-
   const [data, setData] = useState(initialData);
+
+  const [isOpen, setIsOpen] = useState(false);
+  const [rowStates, setRowStates] = useState<{ [key: number]: boolean }>({});
+  const [activeButtonIndex, setActiveButtonIndex] = useState<number | null>(
+    null
+  );
+
+  const onToggle = (rowIndex: number) => {
+    setIsOpen(!isOpen);
+
+    if (activeButtonIndex !== null && activeButtonIndex !== rowIndex) {
+      return;
+    }
+
+    setRowStates({
+      ...rowStates,
+      [rowIndex]: !rowStates[rowIndex] || false, // Toggle the state for the specific row
+    });
+
+    setActiveButtonIndex(activeButtonIndex === rowIndex ? null : rowIndex);
+  };
+
+  const dropdownOptions = [
+    {
+      icon: iconsImgs.account,
+      label: "Action details",
+      link: "/dashboard/profile",
+    },
+    { icon: iconsImgs.freeze, label: "Freeze Account", link: "" },
+    { icon: iconsImgs.block, label: "Block Account", link: "" },
+  ];
 
   const columns = React.useMemo(
     () => [
@@ -65,7 +96,14 @@ const Dashboard = () => {
         id: "kyc status",
         header: "kyc status",
         accessorKey: "kyc status",
-        cell: (ctx: any) => ctx.getValue(),
+        cell: (ctx: any) => {
+          return (
+            <span className="h-4 w-[50px] bg-tinqfiGreen flex justify-end rounded-md">
+              {" "}
+              80% <span className="w-[10px] bg-tinqfiGray"></span>
+            </span>
+          );
+        },
       },
 
       {
@@ -98,14 +136,25 @@ const Dashboard = () => {
         header: "actions",
         accessorKey: "actions",
         cell: (ctx: any) => {
+          const rowIndex = ctx.row.index;
+
           return (
-            <div className="flex">
-              <Button className="w-[50px] border mr-1 rounded-md text-white font-semibold bg-tinqfiBlue text-[8px] flex justify-center items-center">
-                <span>
-                  <BsPlus />
-                </span>
+            <div className="flex ">
+              <Button
+                className="w-[50px] border mr-1 rounded-md text-white font-semibold bg-tinqfiBlue text-[8px] flex justify-center items-center "
+                onClick={() => onToggle(rowIndex)}
+              >
                 Manage
+                <span>
+                  <IoIosArrowDown />
+                </span>
               </Button>
+              {rowStates[rowIndex] ? (
+                <div>
+                  <Dropdown options={dropdownOptions} />
+                </div>
+              ) : null}
+
               <Button className="w-[50px] border mr-1 rounded-md text-black font-semibold text-[8px] flex justify-center items-center">
                 <span>
                   <HiOutlineMail />
@@ -117,7 +166,7 @@ const Dashboard = () => {
         },
       },
     ],
-    []
+    [isOpen, onToggle]
   );
 
   const tabs = [
@@ -214,7 +263,7 @@ const Dashboard = () => {
                 </Button>
               </div>
             </div>
-            <div className=" ">
+            <div className="p-4 ">
               <Tabs tabs={tabs} />
             </div>
           </div>

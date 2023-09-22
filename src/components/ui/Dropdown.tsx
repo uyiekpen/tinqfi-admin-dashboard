@@ -1,73 +1,36 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React from "react";
 
-// Define the type for the option object
-type Option = {
-  label: string;
-  value: string;
-};
+interface DropdownProps {
+  options: { icon: string; label: string; link: string }[];
+}
 
-type DropdownMenuProps = {
-  label: string;
-  options: Option[];
-  onSelect: (option: Option) => void;
-};
-
-const Dropdown: React.FC<DropdownMenuProps> = ({ label, options, onSelect }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const dropdownRef = useRef<HTMLDivElement | null>(null);
-
-  const handleOutsideClick = (event: MouseEvent) => {
-    if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
-      closeDropdown();
-    }
-  };
-
-  useEffect(() => {
-    if (isOpen) {
-      document.addEventListener('mousedown', handleOutsideClick);
-    } else {
-      document.removeEventListener('mousedown', handleOutsideClick);
-    }
-
-    return () => {
-      document.removeEventListener('mousedown', handleOutsideClick);
-    };
-  }, [isOpen]);
-
-  const toggleDropdown = () => {
-    setIsOpen(!isOpen);
-  };
-
-  const closeDropdown = () => {
-    setIsOpen(false);
-  };
-
-  const handleOptionClick = (option: Option) => {
-    onSelect(option);
-    closeDropdown();
-  };
+const Dropdown: React.FC<DropdownProps> = ({ options }) => {
+  const isOpen = true; // Set isOpen to true to always display the dropdown
 
   return (
-    <div className="relative" ref={dropdownRef}>
-      <button
-        className="bg-blue-500 text-white py-2 px-4 rounded"
-        onClick={toggleDropdown}
-      >
-        {label}
-      </button>
+    <div className="relative inline-block text-left">
       {isOpen && (
-        <div className="absolute top-full left-0 mt-2 bg-white border border-gray-300 rounded shadow-md">
-          <ul>
-            {options.map((option) => (
-              <li
-                key={option.value}
-                onClick={() => handleOptionClick(option)}
-                className="py-2 px-4 cursor-pointer hover:bg-gray-100"
+        <div className="origin-top-right absolute right-0   w-40 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+          <div
+            className="py-1"
+            role="menu"
+            aria-orientation="vertical"
+            aria-labelledby="options-menu"
+          >
+            {options.map((option, index) => (
+              <a
+                key={index}
+                href={option.link}
+                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                role="menuitem"
               >
+               <span className="flex gap-2 ">
+               <img src={option.icon} alt="" className="w-4 h-4 object-cover overflow-hidden"/>
                 {option.label}
-              </li>
+               </span>
+              </a>
             ))}
-          </ul>
+          </div>
         </div>
       )}
     </div>

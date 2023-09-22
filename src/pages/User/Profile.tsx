@@ -145,24 +145,34 @@ const Profile = () => {
         </div>
         <div className="mt-5 flex justify-between space-x-2">
           <div className="h-fit w-[280px] bg-white p-4 spaace-y-6  ">
-            <div className="mt-1">Analytics</div>
+            <div className="mt-1 font-semibold">Analytics</div>
             <div className="flex justify-center items-center mt-2">
               <CircularProgressBar
                 percentages={[100, 50, 20, 30]}
                 radius={50}
                 strokeWidth={10}
-                strokeColors={["#FCAD2A", "#4339F2", "#02A0FC","#FF3A29"]}
+                strokeColors={["#FCAD2A", "#4339F2", "#02A0FC", "#FF3A29"]}
               />
             </div>
-            <div className="flex mt-2 justify-between">
-              <h2>wallet</h2>
-              <h2>loan</h2>
-              <h2>earn</h2>
-              <h2>invest</h2>
+            <div className="flex mt-2 justify-between items-center">
+              <h2 className="flex justify-center items-center ">
+                {" "}
+                <div className="w-2 rounded-full h-2 mr-1 bg-[#FCAD2A]"></div> wallet
+              </h2>
+              <h2 className="flex justify-center items-center ">
+                <div className="w-2 rounded-full h-2 bg-[#4339F2] mr-1"></div>loan
+              </h2>
+              <h2 className="flex justify-center items-center ">
+                {" "}
+                <div className="w-2 rounded-full h-2 bg-[#02A0FC] mr-1"></div>earn
+              </h2>
+              <h2 className="flex justify-center items-center ">
+                <div className="w-2 rounded-full h-2 bg-[#FF3A29] mr-1"></div>invest
+              </h2>
             </div>
           </div>
           <div className="h-fit w-[400px] bg-white p-4 rounded-md  space-y-3">
-            <h2>Breakdown</h2>
+            <h2 className="font-semibold">Breakdown</h2>
             <div className="">
               <div className="flex justify-between text-xs font-semibold text-tinqfiYellow mb-1">
                 wallet <span>$65,375</span>

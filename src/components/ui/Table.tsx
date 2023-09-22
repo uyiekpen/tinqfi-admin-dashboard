@@ -69,7 +69,7 @@ const Table = ({
 
   return (
     <div className="flex flex-col mt-2">
-      <div className="overflow-x-auto shadow-md sm: rounded-md">
+      <div className="overflow-x-auto  sm: rounded-md">
         <div className="inline-block min-w-full ">
           <div className="overflow-hidden p-1">
             <table
@@ -84,7 +84,7 @@ const Table = ({
                     key={headerGroup.id}
                     className=" @apply px-6 py-3 text-left rtl:text-right text-sm font-semibold capitalize tracking-wider bg-[#FAFBFC] text-gray-500y dark:text-gray-100"
                   >
-                    {headerGroup.headers.map((header: any)=> (
+                    {headerGroup.headers.map((header: any) => (
                       <th
                         key={header.id}
                         className="px-2 py-3 text-left rtl:text-center text-xs font-semibold capitalize tracking-wider text-gray-500 dark:text-gray-100"
@@ -152,33 +152,19 @@ function Pagination<T>({
   table: ReactTable<T>;
 }>) {
   return (
-    <div className="flex items-center gap-2">
+    <div className="flex items-center justify-center gap-2">
       <IconButton
         onClick={() => table.setPageIndex(0)}
         disabled={!table.getCanPreviousPage()}
       >
-        <ChevronDoubleLeftIcon className={"h-5"} />
+        <ChevronDoubleLeftIcon className={"h-5 border rounded-md"} />
       </IconButton>
 
       <IconButton
         onClick={() => table.previousPage()}
         disabled={!table.getCanPreviousPage()}
       >
-        <ChevronLeftIcon className={"h-5"} />
-      </IconButton>
-
-      <IconButton
-        onClick={() => table.nextPage()}
-        disabled={!table.getCanNextPage()}
-      >
-        <ChevronRightIcon className={"h-5"} />
-      </IconButton>
-
-      <IconButton
-        onClick={() => table.setPageIndex(table.getPageCount() - 1)}
-        disabled={!table.getCanNextPage()}
-      >
-        <ChevronDoubleRightIcon className={"h-5"} />
+        <ChevronLeftIcon className={"h-5 border rounded-md"} />
       </IconButton>
 
       <span className="flex items-center gap-1 text-sm">
@@ -188,6 +174,20 @@ function Pagination<T>({
           {table.getState().pagination.pageIndex + 1} of {table.getPageCount()}
         </strong>
       </span>
+
+      <IconButton
+        onClick={() => table.nextPage()}
+        disabled={!table.getCanNextPage()}
+      >
+        <ChevronRightIcon className={"h-5 border rounded-md"} />
+      </IconButton>
+
+      <IconButton
+        onClick={() => table.setPageIndex(table.getPageCount() - 1)}
+        disabled={!table.getCanNextPage()}
+      >
+        <ChevronDoubleRightIcon className={"h-5 border rounded-md"} />
+      </IconButton>
     </div>
   );
 }
