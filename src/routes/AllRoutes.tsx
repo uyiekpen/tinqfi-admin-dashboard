@@ -5,6 +5,7 @@ import Dashboard from "../pages/DashBoard/Dashboard";
 import User from "../pages/User/User";
 import Profile from "../pages/User/Profile";
 import Deposit from "../pages/Deposit/Deposit";
+import DepositInspect from "../pages/Deposit/DepositInspect";
 
 const AllRoutes = () => {
   const Index = createBrowserRouter([
@@ -39,6 +40,10 @@ const AllRoutes = () => {
             {
               path: "deposit",
               element: <Deposit />,
+            },
+            {
+              path: "deposit-details",
+              element: <DepositInspect />,
             },
           ],
         },

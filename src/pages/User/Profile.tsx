@@ -36,6 +36,8 @@ const profileStats = [
 ] as const;
 
 const Profile = () => {
+
+  
   const tab = [
     {
       label: "Profile Details",

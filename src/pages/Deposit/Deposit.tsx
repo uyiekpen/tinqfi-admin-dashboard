@@ -4,6 +4,7 @@ import Table from "../../components/ui/Table";
 import { Message, Transaction, usertoken } from "../../data/data";
 import { Button } from "../../components/ui";
 import { iconsImgs } from "../../utils/images";
+import { Link } from "react-router-dom";
 
 const salesStatistics = [
   {
@@ -53,7 +54,9 @@ const Deposit = () => {
 
               <div>
                 <span className="text-xs font-semibold">User00001387</span>
-                <p className="text-xs text-gray-500 font-light">esther@gmail.com</p>
+                <p className="text-xs text-gray-500 font-light">
+                  esther@gmail.com
+                </p>
               </div>
             </div>
           );
@@ -115,9 +118,11 @@ const Deposit = () => {
         cell: (ctx: any) => {
           return (
             <div>
-              <Button className="bg-tinqfiBlue text-center text-xs rounded-md p-1 text-white font-semibold">
-                inspect
-              </Button>
+              <Link to="/dashboard/deposit-details">
+                <Button className="bg-tinqfiBlue text-center text-xs rounded-md p-1 text-white font-semibold">
+                  inspect
+                </Button>
+              </Link>
             </div>
           );
         },
