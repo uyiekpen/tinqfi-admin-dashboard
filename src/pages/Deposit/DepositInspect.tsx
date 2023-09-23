@@ -1,9 +1,39 @@
 import React from "react";
 import dayjs from "dayjs";
-import { Message, Transaction } from "../../data/data";
-import { NewTab } from "../../components/ui";
+import Table from "../../components/ui/Table";
+import { Message, Transaction, usertoken } from "../../data/data";
+import { Button, NewTab } from "../../components/ui";
+import { iconsImgs } from "../../utils/images";
+import { Link } from "react-router-dom";
 
-const DepositInspect = () => {
+const salesStatistics = [
+  {
+    id: 0,
+    title: "New Users",
+    amount: "721K",
+    date: "07 Jan",
+    percentage: "11.01%",
+    status: "profit",
+  },
+  {
+    id: 1,
+    title: "inflows",
+    amount: "$721K",
+    date: "07 Jan",
+    percentage: "-3.2%",
+    status: "lost",
+  },
+  {
+    id: 0,
+    title: "Active Users",
+    amount: "7,249.31    ",
+    date: "07 Jan",
+    percentage: "11.01%",
+    status: "profit",
+  },
+] as const;
+
+const Deposit = () => {
   const tab = [
     {
       label: "Profile Details",
@@ -86,13 +116,11 @@ const DepositInspect = () => {
 
   return (
     <div className=" h-full grid grid-cols-[auto,minmax(0,2fr)] ">
-      <section className="px-3 py-4">
+      <section className="px-4 py-4">
         <div className="w-[730px] h-fit bg-white rounded-md p-2">
-          <h2 className="p-2 text-lg  semibold">Transaction Details</h2>
-          <div>
-            <div>
-              <NewTab tabs={tab} />
-            </div>
+          <h2 className="font-semibold px-4 mb-8">Transaction Details</h2>
+          <div className="px-4">
+            <NewTab tabs={tab} />
           </div>
         </div>
       </section>
@@ -108,7 +136,7 @@ const DepositInspect = () => {
                 {Message.map((message) => (
                   <div
                     key={message.id}
-                    className="flex items-center justify-center h-[50px] px-2 bg-tinqfiGray   mt-2 rounded-md w-[500px]  "
+                    className="flex items-center justify-center h-[50px] px-2 bg-tinqfiGray   mt-2 rounded-md w-[300px]  "
                   >
                     <div className="flex justify-center w-full items-center">
                       <div className="h-[30px] w-[30px] rounded-md overflow-hidden">
@@ -119,7 +147,7 @@ const DepositInspect = () => {
                         />
                       </div>
 
-                      <div className=" px-2 w-[500px] text-sm capitalize">
+                      <div className=" px-2 w-[300px] text-sm capitalize">
                         <h2 className="font-semibold">{message.title}</h2>
                         <p>
                           {message.date}|{message.time}
@@ -143,7 +171,7 @@ const DepositInspect = () => {
                 {Transaction.map((transaction) => (
                   <div
                     key={transaction.id}
-                    className="flex items-center justify-evenly h-[50px] bg-tinqfiGray mt-2 rounded-md   w-[500px] "
+                    className="flex items-center justify-evenly h-[50px] bg-tinqfiGray mt-2 rounded-md   w-[300px] "
                   >
                     <div className="flex justify-center w-full items-center px-2">
                       <div className="h-[30px] w-[30px] rounded-md overflow-hidden">
@@ -153,7 +181,7 @@ const DepositInspect = () => {
                           className="object-cover w-full h-full"
                         />
                       </div>
-                      <div className=" px-2 w-[500px] text-sm capitalize flex justify-between">
+                      <div className=" px-2 w-[300px] text-sm capitalize flex justify-between">
                         <div className="">
                           <h2 className="font-semibold">{transaction.title}</h2>
                           <p>
@@ -179,4 +207,4 @@ const DepositInspect = () => {
   );
 };
 
-export default DepositInspect;
+export default Deposit;
