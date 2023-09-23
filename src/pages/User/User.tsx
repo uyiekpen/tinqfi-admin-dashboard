@@ -20,7 +20,7 @@ const salesStatistics = [
   {
     id: 1,
     title: "inflows",
-    amount: "$721K",
+    amount: "121K",
     date: "07 Jan",
     percentage: "11.01%",
     status: "lost",
@@ -28,7 +28,7 @@ const salesStatistics = [
   {
     id: 0,
     title: "Active Users",
-    amount: "$7,249.31    ",
+    amount: "239K    ",
     date: "07 Jan",
     percentage: "11.01%",
     status: "profit",

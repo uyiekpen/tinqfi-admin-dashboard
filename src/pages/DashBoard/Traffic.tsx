@@ -39,7 +39,7 @@ const Revenue = () => {
         />
       </div>
       <div className="flex justify-center flex-col bg-white rounded-md  w-[180px] h-[250px] p-2">
-        <div className="p-4 text-sm">Traffic by Location</div>
+        <div className="p-4 text-sm">Traffic by Website</div>
         <div>
           <LineChart />
         </div>

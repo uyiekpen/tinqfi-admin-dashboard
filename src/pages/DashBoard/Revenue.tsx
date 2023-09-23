@@ -35,8 +35,8 @@ const Revenue = () => {
   ];
 
   return (
-    <div className="flex justify-between space-x-3">
-      <div className="flex justify-center flex-col bg-white rounded-md  w-[270px] h-[250px] ">
+    <div className="flex justify-between space-x-2">
+      <div className="flex justify-center flex-col bg-white rounded-md  w-[220px] h-[250px] ">
         <div className="p-4 text-sm font-semibold">
           Product User distribution
         </div>
@@ -47,7 +47,7 @@ const Revenue = () => {
           percentages={percentage}
         />
       </div>
-      <div className="flex justify-center flex-col bg-white rounded-md  w-[420px] h-[250px] p-2">
+      <div className="flex justify-center flex-col bg-white rounded-md  w-[460px] h-[250px] p-2">
         <div className="p-4 text-sm font-semibold">Total Revenue</div>{" "}
         <DoubleBarChart labels={labels} datasets={datasets} title={""} />
       </div>

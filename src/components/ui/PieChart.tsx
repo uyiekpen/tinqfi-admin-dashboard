@@ -47,7 +47,7 @@ const DoughnutChart: React.FC<DoughnutChartProps> = ({
   };
 
   return (
-    <div className="relative  flex justify-evenly items-center ">
+    <div className="relative  flex justify-between items-center px-2 space-x-1 ">
       <div className="" style={{ width: "80px", height: "80px" }}>
         <Doughnut data={chartData} options={chartOptions} />
       </div>
@@ -55,7 +55,7 @@ const DoughnutChart: React.FC<DoughnutChartProps> = ({
         {labels.map((label, index) => (
           <div
             key={index}
-            className="flex items-center justify-between  space-x-4 tracking-wide  w-fit "
+            className="flex items-center justify-between w-[100px] "
           >
             <div
               className="w-2 h-2 rounded-full "

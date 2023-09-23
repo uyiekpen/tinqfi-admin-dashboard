@@ -1,6 +1,5 @@
 import { FiChevronDown } from "react-icons/fi";
 import { Message, Transaction } from "../../data/data";
-import { iconsImgs } from "../../utils/images";
 import Traffic from "./Traffic";
 import Revenu from "./Revenue";
 import { BsPlus } from "react-icons/bs";
@@ -26,7 +25,7 @@ const salesStatistics = [
   {
     id: 0,
     title: "Active Users",
-    amount: "7,249.31    ",
+    amount: "239K   ",
     date: "07 Jan",
     percentage: "11.01%",
     status: "profit",
