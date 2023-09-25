@@ -41,40 +41,43 @@ const Deposit = () => {
         <div className="px-2  text-sm ">
           <div className="flex justify-between py-2">
             <div> Username:</div>{" "}
-            <span className="text-left w-[500px]">Elijah098</span>
+            <span className="text-left w-[500px] font-semibold">Elijah098</span>
           </div>
           <div className="flex justify-between py-2">
-            <div>Token</div> <span className="text-left w-[500px]">Tinq</span>
+            <div>Token:</div>{" "}
+            <span className="text-left w-[500px] font-semibold text-tinqfiYellow">Tinq</span>
           </div>
           <div className="flex justify-between py-2">
-            <div> Deposit Address </div>{" "}
-            <span className="text-left w-[500px]">
+            <div> Deposit Address: </div>{" "}
+            <span className="text-left w-[500px] text-gray-500">
               72gbhfeeugwuig9ug2iuiwdh9u9h92bvybubeubfu2bob3u9r
             </span>
           </div>
           <div className="flex justify-between py-2">
-            <div> Estimated Arrival</div>{" "}
-            <span className="text-left w-[500px]">
+            <div> Estimated Arrival:</div>{" "}
+            <span className="text-left w-[500px] text-gray-500">
               55 mins ago (Aug-08-2023 10:20:35 PM +GMT)
             </span>
           </div>
           <div className="flex justify-between py-2">
-            <div>Amount</div>{" "}
-            <span className="text-left w-[500px]">$2,534.94</span>
+            <div>Amount:</div>{" "}
+            <span className="text-left w-[500px] font-semibold">$2,534.94</span>
           </div>
           <div className="flex justify-between py-2">
-            <div> value </div>
-            <span className="text-left w-[500px]">
+            <div> value: </div>
+            <span className="text-left w-[500px] font-semibold">
               0.00072277373747485 Tinq
             </span>
           </div>
           <div className="flex justify-between py-2">
-            <div>Transaction Value</div>{" "}
-            <span className="text-left w-[500px]">0.0000000000000011 Tinq</span>
+            <div>Transaction fee : </div>{" "}
+            <span className="text-left w-[500px] text-gray-500">
+              0.0000000000000011 Tinq
+            </span>
           </div>
           <div className="flex justify-between py-2">
-            <div> Transaction Hash </div>
-            <span className="text-left w-[500px]">
+            <div> Transaction Hash : </div>
+            <span className="text-left w-[500px] text-gray-500">
               72gbhfeeugwuig9ug2iuiwdh9u9h92bvybubeubfu2bob3u9r
             </span>
           </div>

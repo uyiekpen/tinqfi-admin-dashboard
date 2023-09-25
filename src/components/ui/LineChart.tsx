@@ -4,7 +4,9 @@ const LineChart = () => {
   return (
     <div className="p-2 flex flex-col justify-start">
       <div className="text-[10px] flex justify-between font-semibold items-center">
-        Google <span className=" h-1 w-20 bg-tinqfiGray rounded-full"></span>
+        Google <span className=" h-1 w-20 bg-tinqfiGray rounded-full">
+          
+        </span>
       </div>
       <div className="text-[10px] flex justify-between font-semibold items-center">
         Youtube <span className=" h-1 w-16 bg-tinqfiGray rounded-full"></span>

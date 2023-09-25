@@ -36,7 +36,7 @@ const Revenue = () => {
 
   return (
     <div className="flex justify-between space-x-2">
-      <div className="flex justify-center flex-col bg-white rounded-md  w-[220px] h-[250px] ">
+      <div className="flex justify-center flex-col bg-white rounded-md  w-[220px] h-[250px] space-y-4 ">
         <div className="p-4 text-sm font-semibold">
           Product User distribution
         </div>

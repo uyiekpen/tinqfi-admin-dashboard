@@ -5,8 +5,8 @@ import { SidebarContext } from "../../context/sidebarContext";
 import { ToggleButton } from "../ui";
 
 const Sidebar = () => {
-  const [activeLinkIdx] = useState(1);
-  const [sidebarClass, setSidebarClass] = useState("");
+  const [activeLinkIdx, setActiveLinkIdx] = useState<number>(0); // Initialize to 0
+  const [sidebarClass, setSidebarClass] = useState<string>("");
   const { isSidebarOpen } = useContext(SidebarContext);
 
   useEffect(() => {
@@ -17,21 +17,29 @@ const Sidebar = () => {
     }
   }, [isSidebarOpen]);
 
+  const handleLinkClick = (index: number) => {
+    // Set the clicked link as active
+    setActiveLinkIdx(index);
+  };
+
   return (
-    <div className="sidebar">
+    <div className={`sidebar ${sidebarClass}`}>
       <div className="logo">
         <img src={Imgs.logo} alt="logo.png" className="logo-img" />
       </div>
       <div className="menu custom-scrollbar">
         <nav className="navigation">
           <ul className="nav-list">
-            {navigationLinks.map((navigationLink) => (
+            {navigationLinks.map((navigationLink, index) => (
               <li className="nav-item" key={navigationLink.id}>
                 <a
                   href={navigationLink.link}
                   className={`nav-link ${
-                    navigationLink.id === activeLinkIdx ? "active" : null
+                    index === activeLinkIdx ? "active" : ""
                   }`}
+                  onClick={() => {
+                    handleLinkClick(index);
+                  }}
                 >
                   <img
                     src={navigationLink.image}

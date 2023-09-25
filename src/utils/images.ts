@@ -32,8 +32,10 @@ import bitcoin from "../assets/icon/bitcoin.png";
 import account from "../assets/icon/account.png";
 import freeze from "../assets/icon/freeze.png";
 import block from "../assets/icon/block.png";
+import caution from "../assets/icon/caution.png"
 
 export const iconsImgs = {
+  caution,
   bitcoin,
   card,
   earn,
