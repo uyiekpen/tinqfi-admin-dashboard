@@ -9,7 +9,7 @@ const Header = () => {
     <div className="header">
       <div className="holder">
         {" "}
-        <h2 className="font-bold">Dashboard</h2>
+        <h1 className="font-extrabold text-2xl px-9">Dashboard</h1>
         <div className="header-search">
           <span>
             <AiOutlineSearch />
@@ -18,8 +18,8 @@ const Header = () => {
         </div>
         <div className="lang-icon">
           <img src={iconsImgs.United} alt="united.png" />
-          <span>Eng(US)</span>
-          <span>
+          <span className="text-sm font-semibold">Eng(US)</span>
+          <span className="font-light">
             <RiArrowDownSLine />
           </span>
         </div>
@@ -31,13 +31,13 @@ const Header = () => {
             </span>
           </div>
           <div className="flex">
-            <div className="h-[40px] w-[35px]bg-tinqfiPink rounded-md">
+            <div className="h-[40px] w-[35px]bg-tinqfiPink rounded-md overflow-hidden">
             
               <img src={iconsImgs.avatar1} className="w-full h-full object-contain " alt="profile.png"/>
             </div>
 
-            <div className="flex flex-col text-sm capitalize">
-              <div className="flex ">
+            <div className="flex flex-col justify-center px-2 text-xs capitalize">
+              <div className="flex font-semibold ">
                 {" "}
                 cory fervent{" "}
                 <span>
