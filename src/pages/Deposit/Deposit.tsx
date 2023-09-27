@@ -5,33 +5,7 @@ import { Message, Transaction, usertoken } from "../../data/data";
 import { Button } from "../../components/ui";
 import { iconsImgs } from "../../utils/images";
 import { Link } from "react-router-dom";
-
-const salesStatistics = [
-  {
-    id: 0,
-    title: "New Users",
-    amount: "721K",
-    date: "07 Jan",
-    percentage: "11.01%",
-    status: "profit",
-  },
-  {
-    id: 1,
-    title: "inflows",
-    amount: "$721K",
-    date: "07 Jan",
-    percentage: "-3.2%",
-    status: "lost",
-  },
-  {
-    id: 0,
-    title: "Active Users",
-    amount: "7,249.31    ",
-    date: "07 Jan",
-    percentage: "11.01%",
-    status: "profit",
-  },
-] as const;
+import { FiChevronDown } from "react-icons/fi";
 
 const Deposit = () => {
   const data = React.useMemo(() => usertoken.onRegistrationLedgerAccnts, []);
@@ -133,7 +107,18 @@ const Deposit = () => {
   return (
     <div className=" h-full grid grid-cols-[auto,minmax(0,2fr)] ">
       <section className="px-3 py-4">
+        <div>
+          <h3 className="flex  text-sm capitalize font-semibold py-2 ">
+            today
+            <span className="mt-1">
+              <FiChevronDown />
+            </span>
+          </h3>
+        </div>
         <div className="w-[730px] h-fit bg-white rounded-md p-2">
+          <h2 className="flex  text-sm capitalize font-semibold py-2 ">
+            deposits
+          </h2>
           <Table data={data} columns={columns} />,
         </div>
       </section>

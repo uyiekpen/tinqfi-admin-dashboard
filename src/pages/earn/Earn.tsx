@@ -35,7 +35,7 @@ const salesStatistics = [
   },
 ] as const;
 
-const User = () => {
+const Earn = () => {
   const initialData = React.useMemo(
     () => usertoken.onRegistrationLedgerAccnts,
     []
@@ -352,4 +352,4 @@ const User = () => {
   );
 };
 
-export default User;
+export default Earn;
