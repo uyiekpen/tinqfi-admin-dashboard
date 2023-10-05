@@ -10,7 +10,7 @@ import Profile from "../pages/User/Profile";
 import User from "../pages/User/User";
 import Withdrawal from "../pages/withdrawal/Withdrawal";
 import WithDrawalDetails from "../pages/withdrawal/WithdrawalDetails";
-
+import Assets from "../pages/User/Assets";
 
 const AllRoutes = () => {
   const Index = createBrowserRouter([
@@ -22,56 +22,53 @@ const AllRoutes = () => {
       path: "/create-account",
       element: <SignUp />,
     },
-
     {
-      path: "/dashboard",
+      element: <Main />,
       children: [
         {
-          element: <Main />,
-          children: [
-            {
-              index: true,
-              element: <Dashboard />,
-            },
-            {
-              path: "user",
-              element: <User />,
-            },
-            {
-              path: "profile",
-              element: <Profile />,
-            },
-
-            {
-              path: "deposit",
-              element: <Deposit />,
-            },
-            {
-              path: "deposit-details",
-              element: <DepositInspect />,
-            },
-
-            {
-              path: "withdrawal",
-              element: <Withdrawal />,
-            },
-            {
-              path: "withdrawal-details",
-              element: <WithDrawalDetails />,
-            },
-            {
-              path: "transfer",
-              element: <Transfer />,
-            },
-            {
-              path: "earn",
-              element: <Earn />,
-            },
-          ],
+          path: "dashboard",
+          element: <Dashboard />,
+        },
+        {
+          path: "user",
+          element: <User />,
+        },
+        {
+          path: "profile",
+          element: <Profile />,
+        },
+        {
+          path: "deposit",
+          element: <Deposit />,
+        },
+        {
+          path: "deposit-details",
+          element: <DepositInspect />,
+        },
+        {
+          path: "withdrawal",
+          element: <Withdrawal />,
+        },
+        {
+          path: "withdrawal-details",
+          element: <WithDrawalDetails />,
+        },
+        {
+          path: "transfer",
+          element: <Transfer />,
+        },
+        {
+          path: "earn",
+          element: <Earn />,
+        },
+        {
+          path: "assets",
+          element: <Assets />,
         },
       ],
     },
   ]);
+
   return <RouterProvider router={Index}></RouterProvider>;
 };
 

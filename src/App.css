@@ -49,14 +49,14 @@
 }
 
 .nav-link {
-  @apply h-[44px] p-4 transition-all duration-300 ease-in-out   flex items-center justify-between  gap-6 tracking-wide border border-transparent capitalize;
+  @apply h-[44px] p-4 flex items-center justify-between gap-6 tracking-wide border border-transparent capitalize text-textgrey font-semibold text-[15px] leading-[19.2px];
 }
 .nav-link:hover {
   @apply border-2 border-tinqfiGrey;
 }
 
-.nav-link.active {
-  @apply bg-tinqfiGrey  text-tinqfiYellow;
+.nav-link-active {
+  @apply bg-tinqfiGrey text-tinqfiYellow border-4 fill-tinqfiYellow stroke-tinqfiYellow;
 }
 
 .nav-link-icon {
@@ -66,9 +66,14 @@
 .navigation-2 {
   @apply mt-9 mb-2;
 }
+.active-icon {
+  color: red;
+  fill: red;
+  stroke: red;
+}
 
 .navigation-3 {
-  @apply h-[60px]  -mb-16  flex  justify-center items-center;
+  @apply h-[60px] -mb-16 flex justify-center items-center;
 }
 
 @layer utilities {

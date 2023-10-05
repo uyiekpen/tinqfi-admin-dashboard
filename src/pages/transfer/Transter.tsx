@@ -13,7 +13,7 @@ const Transfer = () => {
     () => [
       {
         id: "User ID",
-        header: "User ID",
+        header: "User ID(form)",
         accessorKey: "User ID",
         cell: (ctx: any) => {
           return (
@@ -28,7 +28,26 @@ const Transfer = () => {
 
               <div>
                 <span className="text-xs font-semibold">User00001387</span>
-                <p className="text-xs text-gray-500 font-light">
+                <p className="text-xs text-textgrey font-light">
+                  esther@gmail.com
+                </p>
+              </div>
+            </div>
+          );
+        },
+      },
+      {
+        id: "Recipient",
+        header: "Recipient",
+        accessorKey: "Recipient",
+        cell: (ctx: any) => {
+          return (
+            <div className="text-sm flex justify-center items-center">
+            
+
+              <div>
+                <span className="text-xs font-semibold">Starware</span>
+                <p className="text-xs text-textgrey font-light">
                   esther@gmail.com
                 </p>
               </div>
@@ -59,7 +78,12 @@ const Transfer = () => {
         header: "Value",
         accessorKey: "Value",
         cell: (ctx: any) => {
-          return <div className="text-xs font-semibold">0.000234</div>;
+          return (
+            <div className="text-xs font-semibold flex flex-col">
+              0.000234
+              <span className="text-textgrey">$1050</span>
+            </div>
+          );
         },
       },
       {
@@ -68,7 +92,7 @@ const Transfer = () => {
         cell: (ctx: any) => {
           return (
             <div>
-              <Button className="bg-tinqfiGreen text-center text-xs rounded-md p-1 text-white font-semibold">
+              <Button className="bg-tinqfiGreen text-center text-[8px] leading-3 rounded-md p-1 text-white font-semibold">
                 Successfull
               </Button>
             </div>
@@ -93,7 +117,7 @@ const Transfer = () => {
           return (
             <div>
               <Link to="/dashboard/withdrawal-details">
-                <Button className="bg-tinqfiBlue text-center text-xs rounded-md p-1 text-white font-semibold">
+              <Button className="bg-tinqfiBlue text-center text-[8px] leading-3 rounded-md p-1 text-white font-semibold">
                   inspect
                 </Button>
               </Link>

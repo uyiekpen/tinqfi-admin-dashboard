@@ -1,7 +1,6 @@
 import { NewTab } from "../../components/ui";
 import { Message, Transaction } from "../../data/data";
-
-
+import { iconsImgs } from "../../utils/images";
 
 const WithDrawalDetails = () => {
   const tab = [
@@ -9,45 +8,120 @@ const WithDrawalDetails = () => {
       label: "Profile Details",
       content: (
         <div className="px-2  text-sm ">
-          <div className="flex justify-between py-2">
-            <div> Username:</div>{" "}
+          <div className="flex justify-between py-4 font-semibold ">
+            <div className="flex justify-center items-center">
+              Username:
+              <img
+                src={iconsImgs.caution}
+                alt=""
+                className="h-3 w-3 object-contain ml-1"
+              />
+            </div>{" "}
             <span className="text-left w-[500px] font-semibold">Elijah098</span>
           </div>
-          <div className="flex justify-between py-2">
-            <div>Token:</div>{" "}
-            <span className="text-left w-[500px] font-semibold text-tinqfiYellow">Tinq</span>
+          <hr />
+          <div className="flex justify-between py-4 font-semibold ">
+            <div className="flex">
+              Token:{" "}
+              <img
+                src={iconsImgs.caution}
+                alt=""
+                className="h-3 w-3 object-contain ml-1"
+              />
+            </div>{" "}
+            <span className="text-left w-[500px] font-semibold text-tinqfiYellow">
+              Tinq
+            </span>
           </div>
-          <div className="flex justify-between py-2">
-            <div> Deposit Address: </div>{" "}
-            <span className="text-left w-[500px] text-gray-500">
+          <hr />
+
+          <div className="flex justify-between py-4 font-semibold ">
+            <div className="flex">
+              {" "}
+              Deposit Address:{" "}
+              <img
+                src={iconsImgs.caution}
+                alt=""
+                className="h-3 w-3 object-contain ml-1"
+              />{" "}
+            </div>{" "}
+            <span className="text-left w-[500px] text-textgrey">
               72gbhfeeugwuig9ug2iuiwdh9u9h92bvybubeubfu2bob3u9r
             </span>
           </div>
-          <div className="flex justify-between py-2">
-            <div> Estimated Arrival:</div>{" "}
-            <span className="text-left w-[500px] text-gray-500">
-              55 mins ago (Aug-08-2023 10:20:35 PM +GMT)
+          <hr />
+
+          <div className="flex justify-between py-4 font-semibold ">
+            <div className="flex">
+              {" "}
+              Estimated Arrival:{" "}
+              <img
+                src={iconsImgs.caution}
+                alt=""
+                className="h-3 w-3 object-contain ml-1"
+              />
+            </div>
+            <span className="text-left w-[500px] text-textgrey">
+              55 mins ago (Aug-08-2 font-semibold 023 10:20:35 PM +GM T)
             </span>
           </div>
-          <div className="flex justify-between py-2">
-            <div>Amount:</div>{" "}
+          <hr />
+
+          <div className="flex justify-between py-4 font-semibold ">
+            <div className="flex">
+              Amount:{" "}
+              <img
+                src={iconsImgs.caution}
+                alt=""
+                className="h-3 w-3 object-contain ml-1"
+              />
+            </div>{" "}
             <span className="text-left w-[500px] font-semibold">$2,534.94</span>
           </div>
-          <div className="flex justify-between py-2">
-            <div> value: </div>
+          <hr />
+
+          <div className="flex justify-between py-4 font-semibold ">
+            <div className="flex">
+              {" "}
+              value:{" "}
+              <img
+                src={iconsImgs.caution}
+                alt=""
+                className="h-3 w-3 object-contain ml-1"
+              />{" "}
+            </div>
             <span className="text-left w-[500px] font-semibold">
               0.00072277373747485 Tinq
             </span>
           </div>
-          <div className="flex justify-between py-2">
-            <div>Transaction fee : </div>{" "}
-            <span className="text-left w-[500px] text-gray-500">
+          <hr />
+
+          <div className="flex justify-between py-4 font-semibold  ">
+            <div className="flex">
+              Transaction fee :{" "}
+              <img
+                src={iconsImgs.caution}
+                alt=""
+                className="h-3 w-3 object-contain ml-1"
+              />{" "}
+            </div>{" "}
+            <span className="text-left w-[500px] text-textgrey">
               0.0000000000000011 Tinq
             </span>
           </div>
-          <div className="flex justify-between py-2">
-            <div> Transaction Hash : </div>
-            <span className="text-left w-[500px] text-gray-500">
+          <hr />
+
+          <div className="flex justify-between py-4 font-semibold ">
+            <div className="flex">
+              {" "}
+              Transaction Hash :{" "}
+              <img
+                src={iconsImgs.caution}
+                alt=""
+                className="h-3 w-3 object-contain ml-1"
+              />
+            </div>
+            <span className="text-left w-[500px] text-textgrey">
               72gbhfeeugwuig9ug2iuiwdh9u9h92bvybubeubfu2bob3u9r
             </span>
           </div>
@@ -57,30 +131,77 @@ const WithDrawalDetails = () => {
     {
       label: "internal Txns",
       content: (
-        <div className="px-2  text-sm ">
-          <div className="flex justify-between py-2">
-            <div>Senders wallet address</div>
-            <span className="text-left w-[500px]">
+        <div className="px-2 font-semibold   text-xs ">
+          <div className="flex justify-between py-4 font-semibold ">
+            <div className="flex">
+              Senders wallet address :{" "}
+              <img
+                src={iconsImgs.caution}
+                alt=""
+                className="h-3 w-3 object-contain ml-1"
+              />
+            </div>
+            <span className="text-left w-[500px]  text-textgrey">
               72gbhfeeugwuig9ug2iuiwdh9u9h92bvybubeubfu2bob3u9r
             </span>
           </div>
-          <div className="flex justify-between py-2">
-            <div> Recipent wallet address</div>
-            <span className="text-left w-[500px]">
+          <hr />
+          <div className="flex justify-between py-4 font-semibold ">
+            <div className="flex">
+              {" "}
+              Recipent wallet address:{" "}
+              <img
+                src={iconsImgs.caution}
+                alt=""
+                className="h-3 w-3 object-contain ml-1"
+              />
+            </div>
+            <span className="text-left w-[500px] text-textgrey">
               72gbhfeeugwuig9ug2iuiwdh9u9h92bvybubeubfu2bob3u9r
             </span>
           </div>
-          <div className="flex justify-between py-2">
-            <div> Transaction status</div>
-            <span className="text-left w-[500px]">pending</span>
+          <hr />
+          <div className="flex justify-between py-4 font-semibold ">
+            <div className="flex">
+              {" "}
+              Transaction status:{" "}
+              <img
+                src={iconsImgs.caution}
+                alt=""
+                className="h-3 w-3 object-contain ml-1"
+              />
+            </div>
+            <span className="text-left w-[500px] text-tinqfiYellow">
+              pending
+            </span>
           </div>
-          <div className="flex justify-between py-2">
-            <div> Stages</div>
-            <span className="text-left w-[500px]">intaited,pending</span>
+          <hr />
+          <div className="flex justify-between py-4 font-semibold ">
+            <div className="flex">
+              {" "}
+              Stages:{" "}
+              <img
+                src={iconsImgs.caution}
+                alt=""
+                className="h-3 w-3 object-contain ml-1"
+              />
+            </div>
+            <div className="text-left w-[500px] flex text-tinqfiBlue">
+              intaited,<span className="text-tinqfiYellow">pending</span>
+            </div>
           </div>
-          <div className="flex justify-between py-2">
-            <div> Memo</div>
-            <span className="text-left w-[500px]">Allow users</span>
+          <hr />
+          <div className="flex justify-between py-4 font-semibold ">
+            <div className="flex">
+              {" "}
+              Memo:{" "}
+              <img
+                src={iconsImgs.caution}
+                alt=""
+                className="h-3 w-3 object-contain ml-1"
+              />
+            </div>
+            <span className="text-left w-[500px]">Allow users to add notes for each</span>
           </div>
         </div>
       ),
@@ -91,7 +212,7 @@ const WithDrawalDetails = () => {
     <div className=" h-full grid grid-cols-[auto,minmax(0,2fr)] ">
       <section className="px-4 py-4">
         <div className="w-[730px] h-fit bg-white rounded-md p-2">
-          <h2 className="font-semibold px-4 mb-8">Transaction Details</h2>
+          <h2 className="font-semibold px-4 mt-4 mb-4">Transaction Details</h2>
           <div className="px-4">
             <NewTab tabs={tab} />
           </div>

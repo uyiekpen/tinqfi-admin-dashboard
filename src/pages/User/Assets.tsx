@@ -1,87 +1,100 @@
+import React from "react";
+import dayjs from "dayjs";
+import Table from "../../components/ui/Table";
+import { Message, Transaction, usertoken } from "../../data/data";
+import { Button } from "../../components/ui";
+import { iconsImgs } from "../../utils/images";
+import { Link } from "react-router-dom";
 import { FiChevronDown } from "react-icons/fi";
-import { Message, Transaction } from "../../data/data";
-import Traffic from "./Traffic";
-import Revenu from "./Revenue";
-import { BsPlus } from "react-icons/bs";
-import { IoMdTrendingUp } from "react-icons/io";
 
-const salesStatistics = [
-  {
-    id: 0,
-    title: "New Users",
-    amount: "721K",
-    date: "07 Jan",
-    percentage: "11.01%",
-    status: "profit",
-  },
-  {
-    id: 1,
-    title: "inflows",
-    amount: "$721K",
-    date: "07 Jan",
-    percentage: "-3.2%",
-    status: "lost",
-  },
-  {
-    id: 0,
-    title: "Active Users",
-    amount: "239K   ",
-    date: "07 Jan",
-    percentage: "11.01%",
-    status: "profit",
-  },
-] as const;
-
-const Dashboard = () => {
-  return (
-    <div className=" h-full grid grid-cols-[auto,minmax(0,2fr)] ">
-      <section className="px-9 py-2">
-        <div>
-          <h3 className="flex  text-sm capitalize font-semibold py-2 ">
-            today
-            <span className="mt-1">
-              <FiChevronDown />
-            </span>
-          </h3>
-        </div>
-        <div className="sales-stats mb-8">
-          {salesStatistics.map(({ id, title, amount, percentage, status }) => (
-            <div className=" p-4 w-full bg-white rounded-md space-y-3" key={id}>
-              <p className="capitalize font-bold text-[16px] leading-5">
-                {title}
-              </p>
-              <div className="flex items-center justify-between">
-                <div>
-                  <h5 className="text-2xl  font-semibold">{amount}</h5>
-                </div>
-                <p
-                  className={`${
-                    status === "profit" ? "profit" : "lost"
-                  } flex items-center justify-between  rounded-full py-1 px-3 font-semibold text-[12px] leading-4`}
-                >
-                  <BsPlus />
-                  {percentage}
-                  <IoMdTrendingUp />
-                </p>
+const Assets = () => {
+  const data = React.useMemo(() => usertoken.onRegistrationLedgerAccnts, []);
+  const columns = React.useMemo(
+    () => [
+      {
+        id: "Transaction Type",
+        header: "Transaction Type",
+        accessorKey: "Transaction Type",
+        cell: (ctx: any) => {
+          return (
+            <div className="text-sm ">
+              <div>
+                <span className="text-xs font-semibold">Withdrawal</span>
               </div>
             </div>
-          ))}
-        </div>
-        <div className="mb-8">
-          <Traffic />
-        </div>
-        <div className="">
-          <Revenu />
+          );
+        },
+      },
+
+      {
+        id: "Coin",
+        header: "Coin",
+        accessorKey: "Coin",
+        cell: (ctx: any) => {
+          return <div className="text-xs font-semibold">Bitcoin</div>;
+        },
+      },
+      {
+        id: "Amount",
+        header: "Amount",
+        accessorKey: "Amount",
+        cell: (ctx: any) => {
+          return <div className="text-xs font-semibold">$2000</div>;
+        },
+      },
+
+      {
+        id: "Value",
+        header: "Value",
+        accessorKey: "Value",
+        cell: (ctx: any) => {
+          return <div className="text-xs font-semibold">0.000234</div>;
+        },
+      },
+      {
+        header: "Status",
+        accessorKey: "Status",
+        cell: (ctx: any) => {
+          return (
+            <div>
+              <Button className="bg-tinqfiGreen text-center text-xs rounded-md p-1 text-white font-semibold">
+                Successfull
+              </Button>
+            </div>
+          );
+        },
+      },
+      {
+        header: " Date",
+        accessorKey: " Date",
+        cell: (ctx: any) => {
+          return (
+            <div className="flex items-center text-xs font-semibold">
+              {dayjs().format("MM-DD-YYYY")}
+            </div>
+          );
+        },
+      },
+    ],
+    []
+  );
+
+  return (
+    <div className=" h-full grid grid-cols-[auto,minmax(0,2fr)] ">
+      <section className="px-3 py-4">
+        <div className="w-[730px] h-fit bg-white rounded-md p-2">
+          <h2 className="flex  text-sm capitalize font-semibold py-2 ">
+            deposits
+          </h2>
+          <Table data={data} columns={columns} />,
         </div>
       </section>
       <section className="bg-white h-full w-[350px] rounded-md  grid grid-row-2  p-8">
         <div>
           <div>
             <h3 className="flex justify-between text-sm capitalize font-semibold">
-              <span className="text-[18px] leading-[40px]"> Activity</span>
-              <span className="text-tinqfiYellow text-[14px] leading-[24px]">
-                View all{" "}
-              </span>
+              <span> Activity</span>
+              <span className="text-tinqfiYellow">View all </span>
             </h3>
             <div className="">
               <div>
@@ -99,8 +112,8 @@ const Dashboard = () => {
                         />
                       </div>
 
-                      <div className="px-2 w-[300px] text-[12px] capitalize leading-[14.52px]">
-                        <h2 className="font-semibold ">{message.title}</h2>
+                      <div className=" px-2 w-[300px] text-sm capitalize">
+                        <h2 className="font-semibold">{message.title}</h2>
                         <p>
                           {message.date}|{message.time}
                         </p>
@@ -115,10 +128,8 @@ const Dashboard = () => {
         <div className="mt-12">
           <div>
             <h3 className="flex justify-between text-sm capitalize font-semibold">
-              <span className="text-[18px] leading-[40px]"> Transaction</span>
-              <span className="text-tinqfiYellow text-[14px] leading-[24px]">
-                View all{" "}
-              </span>
+              <span> Transaction</span>
+              <span className="text-tinqfiYellow">View all </span>
             </h3>
             <div className="">
               <div>
@@ -135,7 +146,7 @@ const Dashboard = () => {
                           className="object-cover w-full h-full"
                         />
                       </div>
-                      <div className=" px-2 w-[300px] text-[12px] capitalize leading-[14.52px] flex justify-between">
+                      <div className=" px-2 w-[300px] text-sm capitalize flex justify-between">
                         <div className="">
                           <h2 className="font-semibold">{transaction.title}</h2>
                           <p>
@@ -161,4 +172,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default Assets;

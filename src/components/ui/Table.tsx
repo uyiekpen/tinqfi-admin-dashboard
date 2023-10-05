@@ -78,7 +78,7 @@ const Table = ({
                 className
               )}
             >
-              <thead className="text-xs text-gray-700 uppercase  bg-tinqfiGra">
+              <thead className="text-xs text-gray-700 uppercase  bg-tinqfiGray">
                 {table.getHeaderGroups().map((headerGroup) => (
                   <tr
                     key={headerGroup.id}
@@ -101,7 +101,7 @@ const Table = ({
                 ))}
               </thead>
 
-              <tbody className="divide-y divide-gray-200 dark:divide-gray-700 text-sm">
+              <tbody className="divide-y divide-gray-200 dark:divide-gray-700 text-sm ">
                 {table.getRowModel().rows.map((row) => (
                   <Fragment key={row.id}>
                     <tr
@@ -112,7 +112,7 @@ const Table = ({
                     >
                       {row.getVisibleCells().map((cell) => (
                         <td
-                          className=" py-4"
+                          className=" py-2 px-2"
                           style={{
                             width: cell.column.getSize(),
                           }}

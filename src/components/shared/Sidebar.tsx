@@ -3,6 +3,7 @@ import { navigationLinks, navigationdown } from "../../data/data";
 import { Imgs } from "../../utils/images";
 import { SidebarContext } from "../../context/sidebarContext";
 import { ToggleButton } from "../ui";
+import { NavLink, useLocation } from "react-router-dom";
 
 const Sidebar = () => {
   const [activeLinkIdx, setActiveLinkIdx] = useState<number>(0); // Initialize to 0
@@ -17,10 +18,7 @@ const Sidebar = () => {
     }
   }, [isSidebarOpen]);
 
-  const handleLinkClick = (index: number) => {
-    // Set the clicked link as active
-    setActiveLinkIdx(index);
-  };
+  const location = useLocation();
 
   return (
     <div className={`sidebar ${sidebarClass}`}>
@@ -30,24 +28,28 @@ const Sidebar = () => {
       <div className="menu custom-scrollbar">
         <nav className="navigation">
           <ul className="nav-list">
-            {navigationLinks.map((navigationLink, index) => (
+            {navigationLinks.map((navigationLink) => (
               <li className="nav-item" key={navigationLink.id}>
-                <a
-                  href={navigationLink.link}
-                  className={`nav-link ${
-                    index === activeLinkIdx ? "active" : ""
-                  }`}
-                  onClick={() => {
-                    handleLinkClick(index);
-                  }}
+                <NavLink
+                  to={navigationLink.link}
+                  className={({ isActive }) =>
+                    isActive ? "nav-link nav-link-active" : "nav-link"
+                  }
                 >
-                  <img
-                    src={navigationLink.image}
-                    className="nav-link-icon"
-                    alt={navigationLink.title}
-                  />
+                  {navigationLink.icon && (
+                    <div
+                      className={`text-red-600 ${
+                        location.pathname === navigationLink.link
+                          ? "text-red-300 border-red-200 border "
+                          : "fill-black stroke-black"
+                      }`}
+                    >
+                      {navigationLink.icon}
+                    </div>
+                  )}
+
                   <span className="nav-link-text">{navigationLink.title}</span>
-                </a>
+                </NavLink>
               </li>
             ))}
           </ul>

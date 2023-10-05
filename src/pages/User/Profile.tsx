@@ -14,30 +14,32 @@ const profileStats = [
     title: "Wallet",
     percentage: "40%",
     bgColor: "#fff7ea",
+    image: iconsImgs.wallet,
   },
   {
     id: 1,
     title: "Loan",
     percentage: "20%",
     bgColor: "#ECBEFE",
+    image: iconsImgs.loan,
   },
   {
     id: 2,
     title: "Earn",
     percentage: "25%",
     bgColor: "#ECF5Ff",
+    image: iconsImgs.Earning,
   },
   {
     id: 3,
     title: "Invest",
     percentage: "15%",
     bgColor: "#ffebea",
+    image: iconsImgs.invest,
   },
 ] as const;
 
 const Profile = () => {
-
-  
   const tab = [
     {
       label: "Profile Details",
@@ -126,15 +128,17 @@ const Profile = () => {
           </div>
         </div>
         <div className="profile-stats mt-5">
-          {profileStats.map(({ id, title, percentage, bgColor }) => (
+          {profileStats.map(({ id, title, percentage, bgColor, image }) => (
             <div
               className=" p-3 w-full bg-white flex rounded-md space-y-1 items-center"
               key={id}
             >
               <div
-                className={`h-10 w-10 rounded-full  `}
+                className={`h-10 w-10 rounded-full flex justify-center items-center overflow-hidden `}
                 style={{ backgroundColor: bgColor }}
-              ></div>
+              >
+                <img src={image} alt="" className="w-5 h-5 object-contain" />
+              </div>
 
               <div className="flex items-center justify-between flex-col-reverse px-2">
                 <p className="capitalize font-bold text-sm">{title}</p>
@@ -159,17 +163,21 @@ const Profile = () => {
             <div className="flex mt-2 justify-between items-center">
               <h2 className="flex justify-center items-center ">
                 {" "}
-                <div className="w-2 rounded-full h-2 mr-1 bg-[#FCAD2A]"></div> wallet
+                <div className="w-2 rounded-full h-2 mr-1 bg-[#FCAD2A]"></div>{" "}
+                wallet
               </h2>
               <h2 className="flex justify-center items-center ">
-                <div className="w-2 rounded-full h-2 bg-[#4339F2] mr-1"></div>loan
+                <div className="w-2 rounded-full h-2 bg-[#4339F2] mr-1"></div>
+                loan
               </h2>
               <h2 className="flex justify-center items-center ">
                 {" "}
-                <div className="w-2 rounded-full h-2 bg-[#02A0FC] mr-1"></div>earn
+                <div className="w-2 rounded-full h-2 bg-[#02A0FC] mr-1"></div>
+                earn
               </h2>
               <h2 className="flex justify-center items-center ">
-                <div className="w-2 rounded-full h-2 bg-[#FF3A29] mr-1"></div>invest
+                <div className="w-2 rounded-full h-2 bg-[#FF3A29] mr-1"></div>
+                invest
               </h2>
             </div>
           </div>

@@ -1,60 +1,87 @@
+import { ReactNode } from "react";
+import GroupIcon from "../assets/svg/group.icon";
 import { iconsImgs } from "../utils/images";
+import UserIcon from "../assets/svg/user";
+import WIthDrawalIcon from "../assets/svg/withdrawal";
+import TransferIcon from "../assets/svg/transfer";
+import DepositIcon from "../assets/svg/deposit";
 
 // Define the type for your navigation link data.
 type NavigationLink = {
   id: number;
   title: string;
   image: string;
-  link?: string;
+  link: string;
+  icon?: ReactNode | JSX.Element;
 };
 
 // Navigation links data
 export const navigationLinks: NavigationLink[] = [
-  { id: 1, title: "overview", image: iconsImgs.dashboard, link: "/dashboard" },
-  { id: 2, title: "users", image: iconsImgs.users, link: "/dashboard/user" },
+  {
+    id: 1,
+    title: "overview",
+    image: iconsImgs.dashboard,
+    link: "/dashboard",
+    icon: <GroupIcon />,
+  },
+  {
+    id: 2,
+    title: "users",
+    image: iconsImgs.users,
+    link: "/user",
+    icon: <UserIcon />,
+  },
   {
     id: 3,
     title: "deposit",
     image: iconsImgs.deposit,
-    link: "/dashboard/deposit",
+    link: "/deposit",
+    icon: <DepositIcon isActive={true} />,
   },
   {
     id: 4,
     title: "withdrawal",
     image: iconsImgs.withdrawal,
-    link: "/dashboard/withdrawal",
+    link: "/withdrawal",
+    icon: <WIthDrawalIcon />,
   },
   {
     id: 5,
     title: "transfer",
     image: iconsImgs.transfer,
-    link: "/dashboard/transfer",
+    link: "/transfer",
+    icon: <TransferIcon />,
   },
-  { id: 6, title: "earn", image: iconsImgs.earn, link: "/dashboard/earn" },
+  {
+    id: 6,
+    title: "earn",
+    image: iconsImgs.earn,
+    link: "/earn",
+  },
   {
     id: 7,
     title: "exchange",
     image: iconsImgs.exchange,
-    link: "/dashboard/exchange",
+    link: "/exchange",
   },
   {
     id: 8,
     title: "loans",
     image: iconsImgs.schedule,
-    link: "/dashboard/loans",
+    link: "/loans",
   },
   {
     id: 9,
     title: "launchpad",
     image: iconsImgs.launchpad,
-    link: "/dashboard/launchpad",
+    link: "/launchpad",
   },
 ];
 
 export const navigationdown: NavigationLink[] = [
-  { id: 1, title: "notification", image: iconsImgs.notifications },
-  { id: 2, title: "settings", image: iconsImgs.settings },
-  { id: 3, title: "Sign out", image: iconsImgs.signout },
+  { id: 1, title: "notification", image: iconsImgs.notifications, link: "" },
+  { id: 2, title: "settings", image: iconsImgs.settings, link: "" },
+  { id: 3, title: "Sign out", image: iconsImgs.signout, link: "" },
 ];
 
 //notification json
