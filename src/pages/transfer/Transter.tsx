@@ -116,7 +116,7 @@ const Transfer = () => {
         cell: (ctx: any) => {
           return (
             <div>
-              <Link to="/dashboard/withdrawal-details">
+              <Link to="">
               <Button className="bg-tinqfiBlue text-center text-[8px] leading-3 rounded-md p-1 text-white font-semibold">
                   inspect
                 </Button>

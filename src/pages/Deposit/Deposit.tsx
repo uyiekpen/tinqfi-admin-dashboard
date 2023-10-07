@@ -92,7 +92,7 @@ const Deposit = () => {
         cell: (ctx: any) => {
           return (
             <div>
-              <Link to="/dashboard/deposit-details">
+              <Link to="/deposit-details">
                 <Button className="bg-tinqfiBlue text-center text-xs rounded-md p-1 text-white font-semibold">
                   inspect
                 </Button>

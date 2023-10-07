@@ -92,7 +92,7 @@ const Withdrawal = () => {
         cell: (ctx: any) => {
           return (
             <div>
-              <Link to="/dashboard/withdrawal-details">
+              <Link to="/withdrawal-details">
                 <Button className="bg-tinqfiBlue text-center text-xs rounded-md p-1 text-white font-semibold">
                   inspect
                 </Button>
