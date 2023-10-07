@@ -67,7 +67,7 @@ const User = () => {
     {
       icon: iconsImgs.account,
       label: "Action details",
-      link: "/dashboard/profile",
+      link: "/profile",
     },
     { icon: iconsImgs.freeze, label: "Freeze Account", link: "" },
     { icon: iconsImgs.block, label: "Block Account", link: "" },
@@ -226,10 +226,12 @@ const User = () => {
         <div className="sales-stats mb-8">
           {salesStatistics.map(({ id, title, amount, percentage, status }) => (
             <div className=" p-4 w-full bg-white rounded-md space-y-3" key={id}>
-              <p className="capitalize font-bold text-[16px] leading-5">{title}</p>
+              <p className="capitalize font-bold text-[16px] leading-5">
+                {title}
+              </p>
               <div className="flex items-center justify-between">
                 <div>
-                <h5 className="text-2xl  font-semibold">{amount}</h5>
+                  <h5 className="text-2xl  font-semibold">{amount}</h5>
                 </div>
                 <p
                   className={`${

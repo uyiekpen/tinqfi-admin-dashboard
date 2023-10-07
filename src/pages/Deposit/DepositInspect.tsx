@@ -38,7 +38,7 @@ const Deposit = () => {
     {
       label: "Profile Details",
       content: (
-        <div className="px-2  text-sm ">
+        <div className="px-2  text-xs ">
           <div className="flex justify-between py-4 font-semibold ">
             <div className="flex justify-center items-center">
               Username:
@@ -164,7 +164,7 @@ const Deposit = () => {
       content: (
         <div className="px-2 font-semibold   text-xs ">
           <div className="flex justify-between py-4 font-semibold ">
-            <div className="flex">
+            <div className="flex w-[200px]">
               Senders wallet address :{" "}
               <img
                 src={iconsImgs.caution}
@@ -178,9 +178,9 @@ const Deposit = () => {
           </div>
           <hr />
           <div className="flex justify-between py-4 font-semibold ">
-            <div className="flex">
+            <div className="flex w-[200px]">
               {" "}
-              Recipent wallet address:{" "}
+              Recipent wallet address:
               <img
                 src={iconsImgs.caution}
                 alt=""
@@ -193,7 +193,7 @@ const Deposit = () => {
           </div>
           <hr />
           <div className="flex justify-between py-4 font-semibold ">
-            <div className="flex">
+            <div className="flex w-[200px]">
               {" "}
               Transaction status:{" "}
               <img
@@ -208,7 +208,7 @@ const Deposit = () => {
           </div>
           <hr />
           <div className="flex justify-between py-4 font-semibold ">
-            <div className="flex">
+            <div className="flex w-[200px]">
               {" "}
               Stages:{" "}
               <img
@@ -223,7 +223,7 @@ const Deposit = () => {
           </div>
           <hr />
           <div className="flex justify-between py-4 font-semibold ">
-            <div className="flex">
+            <div className="flex w-[200px]">
               {" "}
               Memo:{" "}
               <img

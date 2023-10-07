@@ -84,7 +84,7 @@ const Assets = () => {
       <section className="px-3 py-4">
         <div className="w-[730px] h-fit bg-white rounded-md p-2">
           <h2 className="flex  text-sm capitalize font-semibold py-2 ">
-            deposits
+            Assets
           </h2>
           <Table data={data} columns={columns} />,
         </div>

@@ -11,7 +11,7 @@ import { iconsImgs } from "../../utils/images";
 const salesStatistics = [
   {
     id: 0,
-    title: "New Users",
+    title: "Total Earn Users",
     amount: "721K",
     date: "07 Jan",
     percentage: "11.01%",
@@ -19,16 +19,16 @@ const salesStatistics = [
   },
   {
     id: 1,
-    title: "inflows",
-    amount: "121K",
+    title: "Total Funds($)",
+    amount: "500.15K",
     date: "07 Jan",
     percentage: "11.01%",
     status: "lost",
   },
   {
     id: 0,
-    title: "Active Users",
-    amount: "239K    ",
+    title: "Active Earn Plan",
+    amount: "35   ",
     date: "07 Jan",
     percentage: "11.01%",
     status: "profit",
@@ -77,53 +77,52 @@ const Earn = () => {
     () => [
       {
         id: "Name",
-        header: "Name",
+        header: "Name(plan)",
         accessorKey: "Name",
         cell: (ctx: any) => {
-          return <div className="text-sm">User00001387</div>;
+          return <div className="text-sm">Bitcoin</div>;
         },
       },
 
       {
-        id: "E-mail",
-        header: "E-mail",
-        accessorKey: "E-mail",
+        id: "subscribers",
+        header: "subscribers",
+        accessorKey: "subscribers",
         cell: (ctx: any) => {
-          return <div>esther@gmail.com</div>;
+          return <div>11,023</div>;
         },
       },
       {
-        id: "kyc status",
-        header: "kyc status",
-        accessorKey: "kyc status",
+        id: " status",
+        header: " status",
+        accessorKey: " status",
         cell: (ctx: any) => {
           return (
-            <span className="h-4 w-[50px] bg-tinqfiGreen flex justify-end rounded-md">
-              {" "}
-              80% <span className="w-[10px] bg-tinqfiGray"></span>
-            </span>
+            <Button className="w-[50px] border mr-1 rounded-md text-white font-semibold bg-tinqfiGreen text-[8px] flex justify-center items-center ">
+              Active
+            </Button>
           );
         },
       },
 
       {
-        id: "Country",
-        header: "Country",
-        accessorKey: "Country",
+        id: "APY%",
+        header: "APY%",
+        accessorKey: "APY%",
         cell: (ctx: any) => {
-          return <div>Nigeria</div>;
+          return <div>19%</div>;
         },
       },
       {
-        header: "Sessions",
-        accessorKey: "Sessions",
+        header: "duration",
+        accessorKey: "duration",
         cell: (ctx: any) => {
-          return <div>8h-17h</div>;
+          return <div>flexible</div>;
         },
       },
       {
-        header: "Joined Date",
-        accessorKey: "Joined Date",
+        header: "Date created",
+        accessorKey: "Date created",
         cell: (ctx: any) => {
           return (
             <div className="flex items-center">
@@ -217,7 +216,7 @@ const Earn = () => {
       <section className="px-9 py-2 ">
         <div>
           <h3 className="flex  text-sm capitalize font-semibold py-2 ">
-            today
+            Flexible
             <span className="mt-1">
               <FiChevronDown />
             </span>
@@ -226,10 +225,12 @@ const Earn = () => {
         <div className="sales-stats mb-8">
           {salesStatistics.map(({ id, title, amount, percentage, status }) => (
             <div className=" p-4 w-full bg-white rounded-md space-y-3" key={id}>
-              <p className="capitalize font-bold text-[16px] leading-5">{title}</p>
+              <p className="capitalize font-bold text-[16px] leading-5">
+                {title}
+              </p>
               <div className="flex items-center justify-between">
                 <div>
-                <h5 className="text-2xl  font-semibold">{amount}</h5>
+                  <h5 className="text-2xl  font-semibold">{amount}</h5>
                 </div>
                 <p
                   className={`${
@@ -247,7 +248,9 @@ const Earn = () => {
         <div className="mb-8 bg-white h-fit w-[700px]">
           <div>
             <div className="flex justify-between p-4 ">
-              <h3 className="flex  text-lg capitalize font-semibold ">User</h3>
+              <h3 className="flex  text-lg capitalize font-semibold ">
+                Flexible Plan Activity
+              </h3>
               <div className="flex">
                 <Button className="w-[100px] border mr-1 rounded-md text-white font-semibold bg-tinqfiYellow text-sm flex justify-center items-center">
                   <span>

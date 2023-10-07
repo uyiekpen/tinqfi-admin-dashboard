@@ -5,6 +5,10 @@ import UserIcon from "../assets/svg/user";
 import WIthDrawalIcon from "../assets/svg/withdrawal";
 import TransferIcon from "../assets/svg/transfer";
 import DepositIcon from "../assets/svg/deposit";
+import Earn from "../assets/svg/earn";
+import Exchange from "../assets/svg/exchange";
+import Loan from "../assets/svg/loan";
+import LaunchPad from "../assets/svg/launchpad";
 
 // Define the type for your navigation link data.
 type NavigationLink = {
@@ -36,7 +40,7 @@ export const navigationLinks: NavigationLink[] = [
     title: "deposit",
     image: iconsImgs.deposit,
     link: "/deposit",
-    icon: <DepositIcon isActive={true} />,
+    icon: <DepositIcon isActive={false} />,
   },
   {
     id: 4,
@@ -57,24 +61,28 @@ export const navigationLinks: NavigationLink[] = [
     title: "earn",
     image: iconsImgs.earn,
     link: "/earn",
+    icon: <Earn />,
   },
   {
     id: 7,
     title: "exchange",
     image: iconsImgs.exchange,
     link: "/exchange",
+    icon: <Exchange />,
   },
   {
     id: 8,
     title: "loans",
     image: iconsImgs.schedule,
     link: "/loans",
+    icon: <Loan />,
   },
   {
     id: 9,
     title: "launchpad",
     image: iconsImgs.launchpad,
     link: "/launchpad",
+    icon: <LaunchPad />,
   },
 ];
 
