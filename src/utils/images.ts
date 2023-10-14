@@ -37,8 +37,10 @@ import moon from "../assets/icon/moon-01.png";
 import sun from "../assets/icon/sun.png";
 import wallet from "../assets/icon/wallet.png";
 import logo from "../assets/image/logo.png";
+import create from "../assets/icon/create.png"
 
 export const iconsImgs = {
+  create,
   wallet,
   loan,
   Earning,

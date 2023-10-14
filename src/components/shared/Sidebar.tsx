@@ -40,11 +40,13 @@ const Sidebar = () => {
                     <div
                       className={`text-red-600 ${
                         location.pathname === navigationLink.link
-                          ? "text-red-300 border-red-200 border "
-                          : "fill-black stroke-black"
+                          ? "text-red-500 border-red-200 border fill-red-500 stroke-red-500 "
+                          : "fill-red-500 stroke-red-500"
                       }`}
                     >
-                      {navigationLink.icon}
+                      {navigationLink.icon && (
+                        <span>{navigationLink.icon}</span>
+                      )}{" "}
                     </div>
                   )}
 

@@ -235,7 +235,7 @@ const Earn = () => {
                 <p
                   className={`${
                     status === "profit" ? "profit" : "lost"
-                  } flex items-center justify-between  rounded-full py-1 px-3 font-bold text-[8px] text-tinqfiBlue leading-[16px] text-[12px] `}
+                  } flex items-center justify-between  rounded-full py-1 px-3 font-bold text-tinqfiBlue leading-[16px] text-[12px] `}
                 >
                   <BsPlus />
                   {percentage}
@@ -252,15 +252,21 @@ const Earn = () => {
                 Flexible Plan Activity
               </h3>
               <div className="flex">
-                <Button className="w-[100px] border mr-1 rounded-md text-white font-semibold bg-tinqfiYellow text-sm flex justify-center items-center">
-                  <span>
-                    <BsPlus />
+                <Button className="w-[80px] border mr-1 rounded-md text-white font-semibold bg-tinqfiBlue text-xs flex justify-center items-center capitalize outline-none">
+                  <span className="mr-2">
+                    <img src={iconsImgs.create} alt="" />
+                  </span>
+                  create
+                </Button>
+                <Button className="w-[80px] border mr-1 rounded-md text-white font-semibold bg-tinqfiYellow text-xs flex justify-center items-center outline-none">
+                  <span className="mr-1 font-bold">
+                    <BsPlus fontWeight={700} size={15}  />
                   </span>
                   Schedule
                 </Button>
-                <Button className="w-[100px] border mr-1 rounded-md text-black font-semibold text-sm flex justify-center items-center">
-                  <span>
-                    <HiOutlineMail />
+                <Button className="w-[80px] border mr-1 rounded-md text-black font-semibold text-xs flex justify-center items-center outline-none">
+                  <span className="mr-1 font-bold ">
+                    <HiOutlineMail fontWeight={700} size={15} />
                   </span>
                   Mail{" "}
                 </Button>

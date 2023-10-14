@@ -1,7 +1,7 @@
-import React from "react";
+import React, { ReactNode } from "react";
 
 interface DropdownProps {
-  options: { icon: string; label: string; link: string }[];
+  options: { icon: string; label: string; link: string | ReactNode }[];
 }
 
 const Dropdown: React.FC<DropdownProps> = ({ options }) => {
@@ -10,7 +10,7 @@ const Dropdown: React.FC<DropdownProps> = ({ options }) => {
   return (
     <div className="relative inline-block text-left">
       {isOpen && (
-        <div className="origin-top-right absolute right-0   w-40 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+        <div className="origin-top-right absolute right-0 w-40 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
           <div
             className="py-1"
             role="menu"
@@ -20,14 +20,19 @@ const Dropdown: React.FC<DropdownProps> = ({ options }) => {
             {options.map((option, index) => (
               <a
                 key={index}
-                href={option.link}
+                href={typeof option.link === 'string' ? option.link : undefined}
+                // Use the 'href' attribute only if 'link' is a string
                 className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                 role="menuitem"
               >
-               <span className="flex gap-2 ">
-               <img src={option.icon} alt="" className="w-4 h-4 object-cover overflow-hidden"/>
-                {option.label}
-               </span>
+                <span className="flex gap-2">
+                  <img
+                    src={option.icon}
+                    alt=""
+                    className="w-4 h-4 object-cover overflow-hidden"
+                  />
+                  {option.label}
+                </span>
               </a>
             ))}
           </div>

@@ -11,6 +11,7 @@ import User from "../pages/User/User";
 import Withdrawal from "../pages/withdrawal/Withdrawal";
 import WithDrawalDetails from "../pages/withdrawal/WithdrawalDetails";
 import Assets from "../pages/User/Assets";
+import FreezeAccount from "../pages/User/FreezeAccount";
 
 const AllRoutes = () => {
   const Index = createBrowserRouter([
@@ -64,6 +65,10 @@ const AllRoutes = () => {
         {
           path: "assets",
           element: <Assets />,
+        },
+        {
+          path: "freeze",
+          element: <FreezeAccount />,
         },
       ],
     },

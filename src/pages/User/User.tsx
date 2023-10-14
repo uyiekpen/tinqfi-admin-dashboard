@@ -1,5 +1,5 @@
 import dayjs from "dayjs";
-import React, { useState } from "react";
+import React, { useState, ReactNode } from "react";
 import { BsPlus } from "react-icons/bs";
 import { FiChevronDown } from "react-icons/fi";
 import { HiOutlineMail } from "react-icons/hi";
@@ -7,6 +7,9 @@ import { IoIosArrowDown, IoMdTrendingUp } from "react-icons/io";
 import { Button, Dropdown, ReusableTable, Tabs } from "../../components/ui";
 import { Message, Transaction, usertoken } from "../../data/data";
 import { iconsImgs } from "../../utils/images";
+import { Link } from "react-router-dom";
+import FreezeAccount from "./FreezeAccount";
+import { JsxElement } from "typescript";
 
 const salesStatistics = [
   {
@@ -69,7 +72,11 @@ const User = () => {
       label: "Action details",
       link: "/profile",
     },
-    { icon: iconsImgs.freeze, label: "Freeze Account", link: "" },
+    {
+      icon: iconsImgs.freeze,
+      label: "Freeze Account",
+      link:"/freeze",
+    },
     { icon: iconsImgs.block, label: "Block Account", link: "" },
   ];
 
@@ -80,7 +87,13 @@ const User = () => {
         header: "Name",
         accessorKey: "Name",
         cell: (ctx: any) => {
-          return <div className="text-sm">User00001387</div>;
+          return (
+            <div>
+              <Link to="/profile">
+                <div className="text-sm">User00001387</div>
+              </Link>
+            </div>
+          );
         },
       },
 
